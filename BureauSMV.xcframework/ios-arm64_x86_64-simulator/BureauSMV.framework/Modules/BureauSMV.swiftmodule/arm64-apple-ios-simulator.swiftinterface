@@ -1,0 +1,63 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0.2 effective-5.10 (swiftlang-6.0.2.1.2 clang-1600.0.26.4)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name BureauSMV
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+import Foundation
+import Network
+import Security
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+import os
+@_hasMissingDesignatedInitializers public class Utility {
+  @objc deinit
+}
+public struct RedirectResult {
+  public var url: Foundation.URL?
+  public let cookies: [Foundation.HTTPCookie]?
+}
+public struct ConnectionResponse {
+  public var status: Swift.Int
+  public let body: Foundation.Data?
+}
+@_hasMissingDesignatedInitializers public class BureauAuth {
+  public class Builder {
+    public init()
+    public func setClientId(clientId: Swift.String) -> BureauSMV.BureauAuth.Builder
+    public func setCallBackUrl(callBackUrl: Swift.String) -> BureauSMV.BureauAuth.Builder
+    public func setTimeout(timeoutinSeconds: Swift.Int) -> BureauSMV.BureauAuth.Builder
+    public func setMode(mode: BureauSMV.Mode) -> BureauSMV.BureauAuth.Builder
+    public func disableWifiSwitchOver() -> BureauSMV.BureauAuth.Builder
+    public func build() -> BureauSMV.BureauAuth
+    @objc deinit
+  }
+  public func makeAuthCall(mobile: Swift.String, correlationId: Swift.String) -> BureauSMV.AuthenticationStatus
+  public func makeAuthCall(mobile: Swift.String, correlationId: Swift.String) -> Swift.Bool
+  @objc deinit
+}
+public enum AuthenticationStatus {
+  case completed
+  case networkUnavailable
+  case onDifferentNetwork
+  case unknown
+  public static func == (a: BureauSMV.AuthenticationStatus, b: BureauSMV.AuthenticationStatus) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum Mode {
+  case sandbox
+  case production
+  public static func == (a: BureauSMV.Mode, b: BureauSMV.Mode) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension BureauSMV.AuthenticationStatus : Swift.Equatable {}
+extension BureauSMV.AuthenticationStatus : Swift.Hashable {}
+extension BureauSMV.Mode : Swift.Equatable {}
+extension BureauSMV.Mode : Swift.Hashable {}

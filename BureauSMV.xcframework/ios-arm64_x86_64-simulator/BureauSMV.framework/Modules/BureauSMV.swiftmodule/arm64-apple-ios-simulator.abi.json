@@ -1,0 +1,1448 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "BureauSMV",
+    "printedName": "BureauSMV",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BureauSMV",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Security",
+        "printedName": "Security",
+        "declKind": "Import",
+        "moduleName": "BureauSMV"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Utility",
+        "printedName": "Utility",
+        "declKind": "Class",
+        "usr": "s:9BureauSMV7UtilityC",
+        "mangledName": "$s9BureauSMV7UtilityC",
+        "moduleName": "BureauSMV",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BureauSMV",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Network",
+        "printedName": "Network",
+        "declKind": "Import",
+        "moduleName": "BureauSMV"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "BureauSMV"
+      },
+      {
+        "kind": "Import",
+        "name": "Network",
+        "printedName": "Network",
+        "declKind": "Import",
+        "moduleName": "BureauSMV"
+      },
+      {
+        "kind": "Import",
+        "name": "os",
+        "printedName": "os",
+        "declKind": "Import",
+        "moduleName": "BureauSMV"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "RedirectResult",
+        "printedName": "RedirectResult",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "url",
+            "printedName": "url",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.URL?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "URL",
+                    "printedName": "Foundation.URL",
+                    "usr": "s:10Foundation3URLV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9BureauSMV14RedirectResultV3url10Foundation3URLVSgvp",
+            "mangledName": "$s9BureauSMV14RedirectResultV3url10Foundation3URLVSgvp",
+            "moduleName": "BureauSMV",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.URL?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "URL",
+                        "printedName": "Foundation.URL",
+                        "usr": "s:10Foundation3URLV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9BureauSMV14RedirectResultV3url10Foundation3URLVSgvg",
+                "mangledName": "$s9BureauSMV14RedirectResultV3url10Foundation3URLVSgvg",
+                "moduleName": "BureauSMV",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.URL?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "URL",
+                        "printedName": "Foundation.URL",
+                        "usr": "s:10Foundation3URLV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9BureauSMV14RedirectResultV3url10Foundation3URLVSgvs",
+                "mangledName": "$s9BureauSMV14RedirectResultV3url10Foundation3URLVSgvs",
+                "moduleName": "BureauSMV",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9BureauSMV14RedirectResultV3url10Foundation3URLVSgvM",
+                "mangledName": "$s9BureauSMV14RedirectResultV3url10Foundation3URLVSgvM",
+                "moduleName": "BureauSMV",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "cookies",
+            "printedName": "cookies",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Foundation.HTTPCookie]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Foundation.HTTPCookie]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "HTTPCookie",
+                        "printedName": "Foundation.HTTPCookie",
+                        "usr": "c:objc(cs)NSHTTPCookie"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9BureauSMV14RedirectResultV7cookiesSaySo12NSHTTPCookieCGSgvp",
+            "mangledName": "$s9BureauSMV14RedirectResultV7cookiesSaySo12NSHTTPCookieCGSgvp",
+            "moduleName": "BureauSMV",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Foundation.HTTPCookie]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[Foundation.HTTPCookie]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "HTTPCookie",
+                            "printedName": "Foundation.HTTPCookie",
+                            "usr": "c:objc(cs)NSHTTPCookie"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9BureauSMV14RedirectResultV7cookiesSaySo12NSHTTPCookieCGSgvg",
+                "mangledName": "$s9BureauSMV14RedirectResultV7cookiesSaySo12NSHTTPCookieCGSgvg",
+                "moduleName": "BureauSMV",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:9BureauSMV14RedirectResultV",
+        "mangledName": "$s9BureauSMV14RedirectResultV",
+        "moduleName": "BureauSMV",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ConnectionResponse",
+        "printedName": "ConnectionResponse",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "status",
+            "printedName": "status",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9BureauSMV18ConnectionResponseV6statusSivp",
+            "mangledName": "$s9BureauSMV18ConnectionResponseV6statusSivp",
+            "moduleName": "BureauSMV",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9BureauSMV18ConnectionResponseV6statusSivg",
+                "mangledName": "$s9BureauSMV18ConnectionResponseV6statusSivg",
+                "moduleName": "BureauSMV",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9BureauSMV18ConnectionResponseV6statusSivs",
+                "mangledName": "$s9BureauSMV18ConnectionResponseV6statusSivs",
+                "moduleName": "BureauSMV",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9BureauSMV18ConnectionResponseV6statusSivM",
+                "mangledName": "$s9BureauSMV18ConnectionResponseV6statusSivM",
+                "moduleName": "BureauSMV",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "body",
+            "printedName": "body",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9BureauSMV18ConnectionResponseV4body10Foundation4DataVSgvp",
+            "mangledName": "$s9BureauSMV18ConnectionResponseV4body10Foundation4DataVSgvp",
+            "moduleName": "BureauSMV",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.Data?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Data",
+                        "printedName": "Foundation.Data",
+                        "usr": "s:10Foundation4DataV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9BureauSMV18ConnectionResponseV4body10Foundation4DataVSgvg",
+                "mangledName": "$s9BureauSMV18ConnectionResponseV4body10Foundation4DataVSgvg",
+                "moduleName": "BureauSMV",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:9BureauSMV18ConnectionResponseV",
+        "mangledName": "$s9BureauSMV18ConnectionResponseV",
+        "moduleName": "BureauSMV",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BureauSMV",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Network",
+        "printedName": "Network",
+        "declKind": "Import",
+        "moduleName": "BureauSMV"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "BureauAuth",
+        "printedName": "BureauAuth",
+        "children": [
+          {
+            "kind": "TypeDecl",
+            "name": "Builder",
+            "printedName": "Builder",
+            "children": [
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Builder",
+                    "printedName": "BureauSMV.BureauAuth.Builder",
+                    "usr": "s:9BureauSMV0A4AuthC7BuilderC"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:9BureauSMV0A4AuthC7BuilderCAEycfc",
+                "mangledName": "$s9BureauSMV0A4AuthC7BuilderCAEycfc",
+                "moduleName": "BureauSMV",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Function",
+                "name": "setClientId",
+                "printedName": "setClientId(clientId:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Builder",
+                    "printedName": "BureauSMV.BureauAuth.Builder",
+                    "usr": "s:9BureauSMV0A4AuthC7BuilderC"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:9BureauSMV0A4AuthC7BuilderC11setClientId06clientG0AESS_tF",
+                "mangledName": "$s9BureauSMV0A4AuthC7BuilderC11setClientId06clientG0AESS_tF",
+                "moduleName": "BureauSMV",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Function",
+                "name": "setCallBackUrl",
+                "printedName": "setCallBackUrl(callBackUrl:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Builder",
+                    "printedName": "BureauSMV.BureauAuth.Builder",
+                    "usr": "s:9BureauSMV0A4AuthC7BuilderC"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:9BureauSMV0A4AuthC7BuilderC14setCallBackUrl04callgH0AESS_tF",
+                "mangledName": "$s9BureauSMV0A4AuthC7BuilderC14setCallBackUrl04callgH0AESS_tF",
+                "moduleName": "BureauSMV",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Function",
+                "name": "setTimeout",
+                "printedName": "setTimeout(timeoutinSeconds:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Builder",
+                    "printedName": "BureauSMV.BureauAuth.Builder",
+                    "usr": "s:9BureauSMV0A4AuthC7BuilderC"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:9BureauSMV0A4AuthC7BuilderC10setTimeout16timeoutinSecondsAESi_tF",
+                "mangledName": "$s9BureauSMV0A4AuthC7BuilderC10setTimeout16timeoutinSecondsAESi_tF",
+                "moduleName": "BureauSMV",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Function",
+                "name": "setMode",
+                "printedName": "setMode(mode:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Builder",
+                    "printedName": "BureauSMV.BureauAuth.Builder",
+                    "usr": "s:9BureauSMV0A4AuthC7BuilderC"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Mode",
+                    "printedName": "BureauSMV.Mode",
+                    "usr": "s:9BureauSMV4ModeO"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:9BureauSMV0A4AuthC7BuilderC7setMode4modeAeA0F0O_tF",
+                "mangledName": "$s9BureauSMV0A4AuthC7BuilderC7setMode4modeAeA0F0O_tF",
+                "moduleName": "BureauSMV",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Function",
+                "name": "disableWifiSwitchOver",
+                "printedName": "disableWifiSwitchOver()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Builder",
+                    "printedName": "BureauSMV.BureauAuth.Builder",
+                    "usr": "s:9BureauSMV0A4AuthC7BuilderC"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:9BureauSMV0A4AuthC7BuilderC21disableWifiSwitchOverAEyF",
+                "mangledName": "$s9BureauSMV0A4AuthC7BuilderC21disableWifiSwitchOverAEyF",
+                "moduleName": "BureauSMV",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Function",
+                "name": "build",
+                "printedName": "build()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "BureauAuth",
+                    "printedName": "BureauSMV.BureauAuth",
+                    "usr": "s:9BureauSMV0A4AuthC"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:9BureauSMV0A4AuthC7BuilderC5buildACyF",
+                "mangledName": "$s9BureauSMV0A4AuthC7BuilderC5buildACyF",
+                "moduleName": "BureauSMV",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "funcSelfKind": "NonMutating"
+              }
+            ],
+            "declKind": "Class",
+            "usr": "s:9BureauSMV0A4AuthC7BuilderC",
+            "mangledName": "$s9BureauSMV0A4AuthC7BuilderC",
+            "moduleName": "BureauSMV",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "makeAuthCall",
+            "printedName": "makeAuthCall(mobile:correlationId:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AuthenticationStatus",
+                "printedName": "BureauSMV.AuthenticationStatus",
+                "usr": "s:9BureauSMV20AuthenticationStatusO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9BureauSMV0A4AuthC04makeC4Call6mobile13correlationIdAA20AuthenticationStatusOSS_SStF",
+            "mangledName": "$s9BureauSMV0A4AuthC04makeC4Call6mobile13correlationIdAA20AuthenticationStatusOSS_SStF",
+            "moduleName": "BureauSMV",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "makeAuthCall",
+            "printedName": "makeAuthCall(mobile:correlationId:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9BureauSMV0A4AuthC04makeC4Call6mobile13correlationIdSbSS_SStF",
+            "mangledName": "$s9BureauSMV0A4AuthC04makeC4Call6mobile13correlationIdSbSS_SStF",
+            "moduleName": "BureauSMV",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:9BureauSMV0A4AuthC",
+        "mangledName": "$s9BureauSMV0A4AuthC",
+        "moduleName": "BureauSMV",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BureauSMV",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AuthenticationStatus",
+        "printedName": "AuthenticationStatus",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "completed",
+            "printedName": "completed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BureauSMV.AuthenticationStatus.Type) -> BureauSMV.AuthenticationStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AuthenticationStatus",
+                    "printedName": "BureauSMV.AuthenticationStatus",
+                    "usr": "s:9BureauSMV20AuthenticationStatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BureauSMV.AuthenticationStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AuthenticationStatus",
+                        "printedName": "BureauSMV.AuthenticationStatus",
+                        "usr": "s:9BureauSMV20AuthenticationStatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9BureauSMV20AuthenticationStatusO9completedyA2CmF",
+            "mangledName": "$s9BureauSMV20AuthenticationStatusO9completedyA2CmF",
+            "moduleName": "BureauSMV"
+          },
+          {
+            "kind": "Var",
+            "name": "networkUnavailable",
+            "printedName": "networkUnavailable",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BureauSMV.AuthenticationStatus.Type) -> BureauSMV.AuthenticationStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AuthenticationStatus",
+                    "printedName": "BureauSMV.AuthenticationStatus",
+                    "usr": "s:9BureauSMV20AuthenticationStatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BureauSMV.AuthenticationStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AuthenticationStatus",
+                        "printedName": "BureauSMV.AuthenticationStatus",
+                        "usr": "s:9BureauSMV20AuthenticationStatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9BureauSMV20AuthenticationStatusO18networkUnavailableyA2CmF",
+            "mangledName": "$s9BureauSMV20AuthenticationStatusO18networkUnavailableyA2CmF",
+            "moduleName": "BureauSMV"
+          },
+          {
+            "kind": "Var",
+            "name": "onDifferentNetwork",
+            "printedName": "onDifferentNetwork",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BureauSMV.AuthenticationStatus.Type) -> BureauSMV.AuthenticationStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AuthenticationStatus",
+                    "printedName": "BureauSMV.AuthenticationStatus",
+                    "usr": "s:9BureauSMV20AuthenticationStatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BureauSMV.AuthenticationStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AuthenticationStatus",
+                        "printedName": "BureauSMV.AuthenticationStatus",
+                        "usr": "s:9BureauSMV20AuthenticationStatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9BureauSMV20AuthenticationStatusO18onDifferentNetworkyA2CmF",
+            "mangledName": "$s9BureauSMV20AuthenticationStatusO18onDifferentNetworkyA2CmF",
+            "moduleName": "BureauSMV"
+          },
+          {
+            "kind": "Var",
+            "name": "unknown",
+            "printedName": "unknown",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BureauSMV.AuthenticationStatus.Type) -> BureauSMV.AuthenticationStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AuthenticationStatus",
+                    "printedName": "BureauSMV.AuthenticationStatus",
+                    "usr": "s:9BureauSMV20AuthenticationStatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BureauSMV.AuthenticationStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AuthenticationStatus",
+                        "printedName": "BureauSMV.AuthenticationStatus",
+                        "usr": "s:9BureauSMV20AuthenticationStatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9BureauSMV20AuthenticationStatusO7unknownyA2CmF",
+            "mangledName": "$s9BureauSMV20AuthenticationStatusO7unknownyA2CmF",
+            "moduleName": "BureauSMV"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AuthenticationStatus",
+                "printedName": "BureauSMV.AuthenticationStatus",
+                "usr": "s:9BureauSMV20AuthenticationStatusO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AuthenticationStatus",
+                "printedName": "BureauSMV.AuthenticationStatus",
+                "usr": "s:9BureauSMV20AuthenticationStatusO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9BureauSMV20AuthenticationStatusO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s9BureauSMV20AuthenticationStatusO2eeoiySbAC_ACtFZ",
+            "moduleName": "BureauSMV",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9BureauSMV20AuthenticationStatusO9hashValueSivp",
+            "mangledName": "$s9BureauSMV20AuthenticationStatusO9hashValueSivp",
+            "moduleName": "BureauSMV",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9BureauSMV20AuthenticationStatusO9hashValueSivg",
+                "mangledName": "$s9BureauSMV20AuthenticationStatusO9hashValueSivg",
+                "moduleName": "BureauSMV",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9BureauSMV20AuthenticationStatusO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s9BureauSMV20AuthenticationStatusO4hash4intoys6HasherVz_tF",
+            "moduleName": "BureauSMV",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:9BureauSMV20AuthenticationStatusO",
+        "mangledName": "$s9BureauSMV20AuthenticationStatusO",
+        "moduleName": "BureauSMV",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Mode",
+        "printedName": "Mode",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "sandbox",
+            "printedName": "sandbox",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BureauSMV.Mode.Type) -> BureauSMV.Mode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Mode",
+                    "printedName": "BureauSMV.Mode",
+                    "usr": "s:9BureauSMV4ModeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BureauSMV.Mode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Mode",
+                        "printedName": "BureauSMV.Mode",
+                        "usr": "s:9BureauSMV4ModeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9BureauSMV4ModeO7sandboxyA2CmF",
+            "mangledName": "$s9BureauSMV4ModeO7sandboxyA2CmF",
+            "moduleName": "BureauSMV"
+          },
+          {
+            "kind": "Var",
+            "name": "production",
+            "printedName": "production",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BureauSMV.Mode.Type) -> BureauSMV.Mode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Mode",
+                    "printedName": "BureauSMV.Mode",
+                    "usr": "s:9BureauSMV4ModeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BureauSMV.Mode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Mode",
+                        "printedName": "BureauSMV.Mode",
+                        "usr": "s:9BureauSMV4ModeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9BureauSMV4ModeO10productionyA2CmF",
+            "mangledName": "$s9BureauSMV4ModeO10productionyA2CmF",
+            "moduleName": "BureauSMV"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Mode",
+                "printedName": "BureauSMV.Mode",
+                "usr": "s:9BureauSMV4ModeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Mode",
+                "printedName": "BureauSMV.Mode",
+                "usr": "s:9BureauSMV4ModeO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9BureauSMV4ModeO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s9BureauSMV4ModeO2eeoiySbAC_ACtFZ",
+            "moduleName": "BureauSMV",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9BureauSMV4ModeO9hashValueSivp",
+            "mangledName": "$s9BureauSMV4ModeO9hashValueSivp",
+            "moduleName": "BureauSMV",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9BureauSMV4ModeO9hashValueSivg",
+                "mangledName": "$s9BureauSMV4ModeO9hashValueSivg",
+                "moduleName": "BureauSMV",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9BureauSMV4ModeO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s9BureauSMV4ModeO4hash4intoys6HasherVz_tF",
+            "moduleName": "BureauSMV",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:9BureauSMV4ModeO",
+        "mangledName": "$s9BureauSMV4ModeO",
+        "moduleName": "BureauSMV",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Utility.swift",
+      "kind": "StringLiteral",
+      "offset": 4212,
+      "length": 3,
+      "value": "\" \""
+    },
+    {
+      "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Utility.swift",
+      "kind": "StringLiteral",
+      "offset": 4238,
+      "length": 4,
+      "value": "\"\n\""
+    },
+    {
+      "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Utility.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4537,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/NetworkReachability.swift",
+      "kind": "BooleanLiteral",
+      "offset": 436,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/NetworkReachability.swift",
+      "kind": "BooleanLiteral",
+      "offset": 472,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/NetworkReachability.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2170,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/NetworkReachability.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2219,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/ConnectionManager.swift",
+      "kind": "StringLiteral",
+      "offset": 168,
+      "length": 5,
+      "value": "\"2.0\""
+    },
+    {
+      "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/ConnectionManager.swift",
+      "kind": "FloatLiteral",
+      "offset": 554,
+      "length": 3,
+      "value": "5.0"
+    },
+    {
+      "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/ConnectionManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 590,
+      "length": 2,
+      "value": "10"
+    },
+    {
+      "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/BureauAuth.swift",
+      "kind": "IntegerLiteral",
+      "offset": 477,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/BureauAuth.swift",
+      "kind": "IntegerLiteral",
+      "offset": 521,
+      "length": 2,
+      "value": "-2"
+    },
+    {
+      "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/BureauAuth.swift",
+      "kind": "IntegerLiteral",
+      "offset": 565,
+      "length": 2,
+      "value": "-3"
+    },
+    {
+      "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/BureauAuth.swift",
+      "kind": "IntegerLiteral",
+      "offset": 601,
+      "length": 2,
+      "value": "-4"
+    },
+    {
+      "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/BureauAuth.swift",
+      "kind": "IntegerLiteral",
+      "offset": 635,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 413,
+      "length": 987,
+      "value": "\"-----BEGIN PUBLIC KEY-----\nMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA2ztwamawYMvBd2Hq5YSS\nDo8hfy8e71g9nA\/+z0\/flHWFRsPercqmIpEFkOGE8YEGWJlhtXBZJ\/XbpQICKZpS\nXye8hNNFvjstKZkHIjx37dDmGnU0GnVDJxnJc+RE37WqJse21rGbitAPmMUvlXXC\njGSygjd4v3v\/uZSIwCelWUTVE1g6iWm2ByyfWL0iYfHyEABrGs2cdvxvKnMkIf10\nKKYUo7QvIzgOGE2hQOgJU40lNNREY0odeIb+i59FsixxpAXKFjB3U6c5WZdvQz4N\nCmDg8cOVIed\/nqHw\/Limxtwpz45GnZsDqGSsr0\/Ig7t\/+C8qdzVxaVbwvZzt99cU\n3CQsT5RnsJGI8fXZ\/MgQxWi0O7iIbmKYGYj1mfbqn1IQLd6MBT6+Ih+ECy7v7Vo2\nRIG5Cz5YskAPN50SjkOCtfVC\/0CL4qJJgA9L+jlGIeAg0WbwdbuJWzemYoeZvKWp\n44gfGDNQRWRZShRSXad8BquilyYXcsYl0tACCs13uvm5VkL\/GVIdH8yasPShQpNG\nzgq\/tmfjjE55ynrxlCrfayjH8XUYAk5j4+HLcgtNrHMekwwlflJ7+04We+HPnSJT\n8ZubvTm+CzFKe89w6Hr5dmabM9JqplFDCqALXrBfTUy61wpFwwgV3HVkhlFpzdjI\nHL7faDJCMjCXxlUd1X04eOECAwEAAQ==\n-----END PUBLIC KEY-----\""
+    },
+    {
+      "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 1430,
+      "length": 987,
+      "value": "\"-----BEGIN PUBLIC KEY-----\nMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAriaWxZ4m+bR\/J\/\/WwvGw\nT7CoA0CoU5Lm+i5EB5WVYuYwGS3JXvBNT1BsisglYI6GSvvRdmLXrR2jmuPKfM0X\n49ddk3mzbuHmGgiloYe\/xL1hCcgxfIpIGS+v60nVeqaaDN3d+rxkcs4To+31Qy3G\nTTag5CPPI8hHAbooB4dT+920JKeNOrr3NPpOjVtnpJufvpOgC5r8EzTpmyoUR+Cw\nEgVukdweSgRPJk74sEoEpPjI3FB4Xk3GLJaNDqerv47P2duVRxeqvNo3ffpNhQHz\nFpOUoii0l9\/tNq32haRmvaimQdj9fAscGpeVkvaz\/Hn0u7WcpmUdrc6sN8sQ57hr\nPpBGhG6eSTySBr4LgwPTn0PqZq5AIur45\/e2tx44cnVP6HlNW9pGSE4VB5h8peuP\nk3mCaxb++UssHQmDdTwPGABHWDNAqrA4dh39fy1ZhOyFGU1jNjVA3D\/nwjHl4a4n\nRagocW6oG0T43hHojetXQA+ve2DqJmGYJ9ckVQwEAypdada3P2Ggg6slG\/K\/oE+5\nT51C0zdJqJ2J7gS02tnNKDoWQ+YGspPG6TbA8FkaO2G2YRz3tgMvgjpW1TeseEmM\nxwAVisaT\/ADh\/rSEACAOww5yNCrPDi2XUtt3lrdvT4uOJz8novqxbH02ulpBjxb5\n+mYXqhx1qdP+kt9k4n\/Iej0CAwEAAQ==\n-----END PUBLIC KEY-----\""
+    },
+    {
+      "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 2447,
+      "length": 987,
+      "value": "\"-----BEGIN PUBLIC KEY-----\nMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA6eSPgvCtRqBby3hdrg5K\nDwvZRKDflakwFWFhtr9A148GkfT25p\/QnxRbwpbYQRz1XkhNmqjE4IzC4o+HcaPB\nyZYl\/H9tmEacONwZvZNuxiW6gFXCLQEZVIZGYNb+mdTVLGXKVeuJ97VpQ64mY2eX\neQs5hQ8Pil39fay+Tw45UjqERF9CGY+OyM2kNTDfx++MN8t+AWziq2U6JZh2iPVy\nTEA8RGc34GEISu9vCkXXkU6NXjS9NoWAvqQ2hv0Y36+BGH3Y42UGEvz1bsgenDnx\nedCegq5CNSLTosjxri1oVtRRYbxtgmLtHK7wpVN6M1Fnr0Ao9JAuTB9i9ZhOKg3h\nI289UwXsvJnS1kE8kVRD6sd3Nt1I+\/cWMjpUv6q0GyO0ymiCz\/XoZRaokIzY\/qZT\n6NDxkAS3jethGQbph+Quv8\/idl5ihUMXi8+XlD69o31yigP+RFADihHHv\/iefq\/z\nJ13xAzRRuVDFWPJb2x5e55ydO6rJ4FEMgRvaJpMLMq5KneNZfEh+vOkC\/9YF8p7V\nR9lQKr2Hnpl9dJ67V\/FeeGqGiiLGEDVXGMJ9o7vqx8MvUDDLPffwws0t8O3C1n\/y\nuO8Q7pYvZMJlV4M5i22gw3izzv2b43EB\/WX2Vr2aUxMZiRZMDICjDE4476sG0oig\nKl9ANyG8pqbQ9yHXF\/YWIrsCAwEAAQ==\n-----END PUBLIC KEY-----\""
+    },
+    {
+      "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 3464,
+      "length": 988,
+      "value": "\"-----BEGIN PUBLIC KEY-----\nMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA2ztwamawYMvBd2Hq5YSS\nDo8hfy8e71g9nA\/+z0\/flHWFRsPercqmIpEFkOGE8YEGWJlhtXBZJ\/XbpQICKZpS\nXye8hNNFvjstKZkHIjx37dDmGnU0GnVDJxnJc+RE37WqJse21rGbitAPmMUvlXXC\njGSygjd4v3v\/uZSIwCelWUTVE1g6iWm2ByyfWL0iYfHyEABrGs2cdvxvKnMkIf10\nKKYUo7QvIzgOGE2hQOgJU40lNNREY0odeIb+i59FsixxpAXKFjB3U6c5WZdvQz4N\nCmDg8cOVIed\/nQhw\/Limxtwpz45GnZsDqGSsr0\/Ig7t\/+C8qdzVxaVbwvZzt99cU\n3CQsT5RnsJGI8fXZ\/MgQxWiOO7iIbmKYGYj1mfbqn1IQLd6MBT66+iH+ECy7v7Vo2\nRIG5Cz5YskAPN50SjkOCtfvc\/0CL4qJJgA9L+jlGIeAg0WbwdbuJWzemYoeZvKWp\n44gfGDNQRWRZShRSXad8BquilyYXcsYl0tACCs13uvm5VkL\/GVIdH8yasPShQpNG\nzgq\/tmfjjE55ynrxlCrfayjH8XUYAk5j4+HLcgtNrHMekwwlflJ7+04We+HPnSJT\n8ZubvTm+CzFKe89w6Hr5dmabM9JqplFDCqALXrBfTUy61wpFwwgV3HVkhlFpzdjI\nHL7faDJCMjCXxlUd1X04eOECAwEAAQ==\n-----END PUBLIC KEY-----\""
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+framework module BureauSMV {
+  header "BureauSMV-Swift.h"
+  requires objc
+}

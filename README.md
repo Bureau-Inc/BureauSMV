@@ -52,7 +52,7 @@ Open and add the below code to the info.plist file.
 Create an instance of the Bureau SDK using the below builder pattern.
 
 ```  let authSDKObj = BureauAuth.Builder()
-    .setClientId(clientId: "<client ID>")
+    .setClientId(clientId: "<<client ID>>")
     .setMode(mode: .production)
     .build()
 ```
@@ -61,5 +61,5 @@ Create an instance of the Bureau SDK using the below builder pattern.
 Make an authentication call using the makeauthcall method.
 
 ```
-let response: BureauAuthentication.AuthenticationStatus  = authSDKObj.makeAuthCall(mobile: "91<<mobile-number>>", correlationId: <<correlationId>>)
+let response: AuthenticationStatus  = authSDKObj.makeAuthCall(mobile: "91<<mobile-number>>", correlationId: <<correlationId>>)
 ```
