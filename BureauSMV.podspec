@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = 'BureauSMV'
-  spec.version      = '0.0.3'
+  spec.version      = '0.0.4'
   spec.summary      = 'BureauSMV is our silent mobile verification solution'
   spec.description  = 'BureauSMV, also know as OTL(one tap login) is enable iOS apps to login user silently using our SMV technology.'
   spec.homepage     = 'https://www.bureau.id/'
