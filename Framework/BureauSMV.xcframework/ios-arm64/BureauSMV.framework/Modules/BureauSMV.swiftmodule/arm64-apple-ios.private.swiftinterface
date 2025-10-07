@@ -42,6 +42,8 @@ public enum AuthenticationStatus {
   case networkUnavailable
   case onDifferentNetwork
   case exceptionOnAuthentication
+  case operatorNotSupported
+  case rateLimitExceeded
   case unknown
   public static func == (a: BureauSMV.AuthenticationStatus, b: BureauSMV.AuthenticationStatus) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
