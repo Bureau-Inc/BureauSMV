@@ -37,19 +37,63 @@ public struct ConnectionResponse {
   public func makeAuthCall(mobile: Swift.String, correlationId: Swift.String) -> Swift.Bool
   @objc deinit
 }
-public enum AuthenticationStatus {
-  case completed
-  case networkUnavailable
-  case onDifferentNetwork
-  case exceptionOnAuthentication
-  case operatorNotSupported
-  case rateLimitExceeded
-  case unknown
+public struct BureauErrorMessages {
+  public static let networkAndOperatorMismatch: Swift.String
+  public static let authFailure: Swift.String
+  public static let networkNotSupported: Swift.String
+  public static let operatorNotSupported: Swift.String
+  public static let operatorAndNetworkNotSupported: Swift.String
+  public static let awaitingProviderAck: Swift.String
+  public static let authValidationError: Swift.String
+  public static let duplicateCorrelationIdMessage: Swift.String
+  public static let previousRequestsFailed: Swift.String
+  public static let integrationFailure: Swift.String
+  public static let illegalApplicationState: Swift.String
+  public static let invalidSignals: Swift.String
+  public static let unauthorized: Swift.String
+  public static let authStateExpired: Swift.String
+  public static let rateLimitExceeded429: Swift.String
+  public static let countryNotSupported: Swift.String
+  public static let internalServerError: Swift.String
+  public static let networkUnavailable: Swift.String
+  public static let wifiDetectedAndNoDataNetwork: Swift.String
+  public static let completed: Swift.String
+  public static let unknown: Swift.String
+}
+public enum AuthenticationStatus : Swift.Equatable {
+  case networkAndOperatorMismatch(Swift.String)
+  case authFailure(Swift.String)
+  case networkNotSupported(Swift.String)
+  case operatorNotSupported(Swift.String)
+  case operatorAndNetworkNotSupported(Swift.String)
+  case awaitingProviderAck(Swift.String)
+  case authValidationError(Swift.String)
+  case duplicateCorrelationId(Swift.String)
+  case integrationFailure(Swift.String)
+  case authStateExpired(Swift.String)
+  case unauthorized(Swift.String)
+  case countryNotSupported(Swift.String)
+  case rateLimitExceeded(Swift.String)
+  case internalServerError(Swift.String)
+  case networkUnavailable(Swift.String)
+  case wifiDetectedAndNoDataNetwork(Swift.String)
+  case completed(Swift.String)
+  case unknown(Swift.String)
   public static func == (a: BureauSMV.AuthenticationStatus, b: BureauSMV.AuthenticationStatus) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
+}
+extension BureauSMV.AuthenticationStatus {
+  public var message: Swift.String {
     get
   }
+  public var bureauCode: Swift.Int? {
+    get
+  }
+  public var alertTitle: Swift.String {
+    get
+  }
+  public static func fromBureauCodeWithMessage(_ code: Swift.Int) -> BureauSMV.AuthenticationStatus
+  public static func fromBureauCodeWithMessage(_ code: Swift.Int, customMessage: Swift.String?) -> BureauSMV.AuthenticationStatus
+  public static func fromBureauCodeWithCustomMessage(_ code: Swift.Int, customMessage: Swift.String) -> BureauSMV.AuthenticationStatus
 }
 public enum Mode {
   case sandbox
@@ -60,7 +104,62 @@ public enum Mode {
     get
   }
 }
-extension BureauSMV.AuthenticationStatus : Swift.Equatable {}
-extension BureauSMV.AuthenticationStatus : Swift.Hashable {}
+public struct BureauDefaults {
+  public static let productionBaseURL: Swift.String
+  public static let sandboxBaseURL: Swift.String
+  public static let initiateEndpoint: Swift.String
+  public static let userInfoEndpoint: Swift.String
+  public static let defaultTimeoutSeconds: Swift.Int
+  public static let minTimeoutSeconds: Swift.Int
+  public static let maxTimeoutSeconds: Swift.Int
+  public static let userInfoTimeoutSeconds: Swift.Int
+  public static let defaultTestClientId: Swift.String
+  public static let defaultTestClientSecret: Swift.String
+  public static let defaultTestPhoneNumber: Swift.String
+  public static let defaultCountryCode: Swift.String
+  public static let phoneNumberPlaceholder: Swift.String
+  public static let minPhoneNumberLength: Swift.Int
+  public static let maxPhoneNumberLength: Swift.Int
+  public static let minCredentialLength: Swift.Int
+  public static let validPhoneStartDigits: [Swift.String]
+  public static let httpMethodGet: Swift.String
+  public static let contentTypeJSON: Swift.String
+  public static let authorizationHeaderKey: Swift.String
+  public static let basicAuthScheme: Swift.String
+  public static let maxRetryAttempts: Swift.Int
+  public static let retryDelaySeconds: Swift.Int
+  public static let httpStatusSuccess: Swift.Int
+  public static let httpStatusBadRequest: Swift.Int
+  public static let httpStatusUnauthorized: Swift.Int
+  public static let httpStatusTimeout: Swift.Int
+  public static let httpStatusServerError: Swift.Int
+  public static let legacyStatusCompleted: Swift.Int64
+  public static let legacyStatusNetworkUnavailable: Swift.Int64
+  public static let legacyStatusDifferentNetwork: Swift.Int64
+  public static let legacyStatusException: Swift.Int64
+  public static let legacyStatusUnknown: Swift.Int64
+}
+public struct BureauDemoDefaults {
+  public static let defaultTimeout: Swift.String
+  public static let alertTitle: Swift.String
+  public static let alertOKButton: Swift.String
+  public static let validateButtonText: Swift.String
+  public static let clientIdLabel: Swift.String
+  public static let clientSecretLabel: Swift.String
+  public static let phoneNumberLabel: Swift.String
+  public static let timeoutLabel: Swift.String
+  public static let environmentLabel: Swift.String
+  public static let sandboxLabel: Swift.String
+  public static let productionLabel: Swift.String
+  public static let emptyClientIdMessage: Swift.String
+  public static let invalidClientIdFormatMessage: Swift.String
+  public static let emptyClientSecretMessage: Swift.String
+  public static let invalidClientSecretFormatMessage: Swift.String
+  public static let emptyPhoneNumberMessage: Swift.String
+  public static let invalidPhoneFormatMessage: Swift.String
+  public static let invalidPhoneStartMessage: Swift.String
+  public static let invalidTimeoutRangeMessage: Swift.String
+  public static let timeoutTooLowMessage: Swift.String
+}
 extension BureauSMV.Mode : Swift.Equatable {}
 extension BureauSMV.Mode : Swift.Hashable {}
