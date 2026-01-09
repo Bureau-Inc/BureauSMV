@@ -15,22 +15,151 @@
         ]
       },
       {
-        "kind": "Import",
-        "name": "Security",
-        "printedName": "Security",
-        "declKind": "Import",
-        "moduleName": "BureauSMV"
-      },
-      {
         "kind": "TypeDecl",
-        "name": "Utility",
-        "printedName": "Utility",
+        "name": "LogManager",
+        "printedName": "LogManager",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "shared",
+            "printedName": "shared",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LogManager",
+                "printedName": "BureauSMV.LogManager",
+                "usr": "s:9BureauSMV10LogManagerC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9BureauSMV10LogManagerC6sharedACvpZ",
+            "mangledName": "$s9BureauSMV10LogManagerC6sharedACvpZ",
+            "moduleName": "BureauSMV",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LogManager",
+                    "printedName": "BureauSMV.LogManager",
+                    "usr": "s:9BureauSMV10LogManagerC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9BureauSMV10LogManagerC6sharedACvgZ",
+                "mangledName": "$s9BureauSMV10LogManagerC6sharedACvgZ",
+                "moduleName": "BureauSMV",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "addLog",
+            "printedName": "addLog(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9BureauSMV10LogManagerC03addC0yySSF",
+            "mangledName": "$s9BureauSMV10LogManagerC03addC0yySSF",
+            "moduleName": "BureauSMV",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "allLogs",
+            "printedName": "allLogs()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9BureauSMV10LogManagerC7allLogsSaySSGyF",
+            "mangledName": "$s9BureauSMV10LogManagerC7allLogsSaySSGyF",
+            "moduleName": "BureauSMV",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "clear",
+            "printedName": "clear()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9BureauSMV10LogManagerC5clearyyF",
+            "mangledName": "$s9BureauSMV10LogManagerC5clearyyF",
+            "moduleName": "BureauSMV",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
         "declKind": "Class",
-        "usr": "s:9BureauSMV7UtilityC",
-        "mangledName": "$s9BureauSMV7UtilityC",
+        "usr": "s:9BureauSMV10LogManagerC",
+        "mangledName": "$s9BureauSMV10LogManagerC",
         "moduleName": "BureauSMV",
         "declAttributes": [
-          "AccessControl"
+          "Final",
+          "AccessControl",
+          "RawDocComment"
         ],
         "hasMissingDesignatedInitializers": true,
         "conformances": [
@@ -62,6 +191,23 @@
       },
       {
         "kind": "Import",
+        "name": "Security",
+        "printedName": "Security",
+        "declKind": "Import",
+        "moduleName": "BureauSMV"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BureauSMV",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Network",
         "printedName": "Network",
         "declKind": "Import",
@@ -78,13 +224,6 @@
         "kind": "Import",
         "name": "Network",
         "printedName": "Network",
-        "declKind": "Import",
-        "moduleName": "BureauSMV"
-      },
-      {
-        "kind": "Import",
-        "name": "os",
-        "printedName": "os",
         "declKind": "Import",
         "moduleName": "BureauSMV"
       },
@@ -651,6 +790,34 @@
               },
               {
                 "kind": "Function",
+                "name": "setLogLevel",
+                "printedName": "setLogLevel(_:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Builder",
+                    "printedName": "BureauSMV.BureauAuth.Builder",
+                    "usr": "s:9BureauSMV0A4AuthC7BuilderC"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LogLevel",
+                    "printedName": "BureauSMV.LogLevel",
+                    "usr": "s:9BureauSMV8LogLevelO"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:9BureauSMV0A4AuthC7BuilderC11setLogLevelyAeA0fG0OF",
+                "mangledName": "$s9BureauSMV0A4AuthC7BuilderC11setLogLevelyAeA0fG0OF",
+                "moduleName": "BureauSMV",
+                "declAttributes": [
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Function",
                 "name": "build",
                 "printedName": "build()",
                 "children": [
@@ -732,6 +899,93 @@
           {
             "kind": "Function",
             "name": "makeAuthCall",
+            "printedName": "makeAuthCall(mobile:correlationId:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BureauSMV.AuthenticationStatus) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AuthenticationStatus",
+                    "printedName": "BureauSMV.AuthenticationStatus",
+                    "usr": "s:9BureauSMV20AuthenticationStatusO"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9BureauSMV0A4AuthC04makeC4Call6mobile13correlationId10completionySS_SSyAA20AuthenticationStatusOctF",
+            "mangledName": "$s9BureauSMV0A4AuthC04makeC4Call6mobile13correlationId10completionySS_SSyAA20AuthenticationStatusOctF",
+            "moduleName": "BureauSMV",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "makeAuthCallAsync",
+            "printedName": "makeAuthCallAsync(mobile:correlationId:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AuthenticationStatus",
+                "printedName": "BureauSMV.AuthenticationStatus",
+                "usr": "s:9BureauSMV20AuthenticationStatusO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9BureauSMV0A4AuthC04makeC9CallAsync6mobile13correlationIdAA20AuthenticationStatusOSS_SStYaF",
+            "mangledName": "$s9BureauSMV0A4AuthC04makeC9CallAsync6mobile13correlationIdAA20AuthenticationStatusOSS_SStYaF",
+            "moduleName": "BureauSMV",
+            "intro_iOS": "13.0",
+            "declAttributes": [
+              "AccessControl",
+              "Available",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "makeAuthCall",
             "printedName": "makeAuthCall(mobile:correlationId:)",
             "children": [
               {
@@ -757,8 +1011,10 @@
             "usr": "s:9BureauSMV0A4AuthC04makeC4Call6mobile13correlationIdSbSS_SStF",
             "mangledName": "$s9BureauSMV0A4AuthC04makeC4Call6mobile13correlationIdSbSS_SStF",
             "moduleName": "BureauSMV",
+            "deprecated": true,
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "Available"
             ],
             "funcSelfKind": "NonMutating"
           }
@@ -787,6 +1043,632 @@
             "mangledName": "$ss9EscapableP"
           }
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BureauSMV",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "os",
+        "printedName": "os",
+        "declKind": "Import",
+        "moduleName": "BureauSMV"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "LogLevel",
+        "printedName": "LogLevel",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "none",
+            "printedName": "none",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BureauSMV.LogLevel.Type) -> BureauSMV.LogLevel",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LogLevel",
+                    "printedName": "BureauSMV.LogLevel",
+                    "usr": "s:9BureauSMV8LogLevelO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BureauSMV.LogLevel.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LogLevel",
+                        "printedName": "BureauSMV.LogLevel",
+                        "usr": "s:9BureauSMV8LogLevelO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9BureauSMV8LogLevelO4noneyA2CmF",
+            "mangledName": "$s9BureauSMV8LogLevelO4noneyA2CmF",
+            "moduleName": "BureauSMV"
+          },
+          {
+            "kind": "Var",
+            "name": "error",
+            "printedName": "error",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BureauSMV.LogLevel.Type) -> BureauSMV.LogLevel",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LogLevel",
+                    "printedName": "BureauSMV.LogLevel",
+                    "usr": "s:9BureauSMV8LogLevelO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BureauSMV.LogLevel.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LogLevel",
+                        "printedName": "BureauSMV.LogLevel",
+                        "usr": "s:9BureauSMV8LogLevelO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9BureauSMV8LogLevelO5erroryA2CmF",
+            "mangledName": "$s9BureauSMV8LogLevelO5erroryA2CmF",
+            "moduleName": "BureauSMV"
+          },
+          {
+            "kind": "Var",
+            "name": "warning",
+            "printedName": "warning",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BureauSMV.LogLevel.Type) -> BureauSMV.LogLevel",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LogLevel",
+                    "printedName": "BureauSMV.LogLevel",
+                    "usr": "s:9BureauSMV8LogLevelO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BureauSMV.LogLevel.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LogLevel",
+                        "printedName": "BureauSMV.LogLevel",
+                        "usr": "s:9BureauSMV8LogLevelO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9BureauSMV8LogLevelO7warningyA2CmF",
+            "mangledName": "$s9BureauSMV8LogLevelO7warningyA2CmF",
+            "moduleName": "BureauSMV"
+          },
+          {
+            "kind": "Var",
+            "name": "info",
+            "printedName": "info",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BureauSMV.LogLevel.Type) -> BureauSMV.LogLevel",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LogLevel",
+                    "printedName": "BureauSMV.LogLevel",
+                    "usr": "s:9BureauSMV8LogLevelO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BureauSMV.LogLevel.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LogLevel",
+                        "printedName": "BureauSMV.LogLevel",
+                        "usr": "s:9BureauSMV8LogLevelO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9BureauSMV8LogLevelO4infoyA2CmF",
+            "mangledName": "$s9BureauSMV8LogLevelO4infoyA2CmF",
+            "moduleName": "BureauSMV"
+          },
+          {
+            "kind": "Var",
+            "name": "debug",
+            "printedName": "debug",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BureauSMV.LogLevel.Type) -> BureauSMV.LogLevel",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LogLevel",
+                    "printedName": "BureauSMV.LogLevel",
+                    "usr": "s:9BureauSMV8LogLevelO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BureauSMV.LogLevel.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LogLevel",
+                        "printedName": "BureauSMV.LogLevel",
+                        "usr": "s:9BureauSMV8LogLevelO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9BureauSMV8LogLevelO5debugyA2CmF",
+            "mangledName": "$s9BureauSMV8LogLevelO5debugyA2CmF",
+            "moduleName": "BureauSMV"
+          },
+          {
+            "kind": "Var",
+            "name": "verbose",
+            "printedName": "verbose",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BureauSMV.LogLevel.Type) -> BureauSMV.LogLevel",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LogLevel",
+                    "printedName": "BureauSMV.LogLevel",
+                    "usr": "s:9BureauSMV8LogLevelO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BureauSMV.LogLevel.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LogLevel",
+                        "printedName": "BureauSMV.LogLevel",
+                        "usr": "s:9BureauSMV8LogLevelO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9BureauSMV8LogLevelO7verboseyA2CmF",
+            "mangledName": "$s9BureauSMV8LogLevelO7verboseyA2CmF",
+            "moduleName": "BureauSMV"
+          },
+          {
+            "kind": "Function",
+            "name": "<",
+            "printedName": "<(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LogLevel",
+                "printedName": "BureauSMV.LogLevel",
+                "usr": "s:9BureauSMV8LogLevelO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LogLevel",
+                "printedName": "BureauSMV.LogLevel",
+                "usr": "s:9BureauSMV8LogLevelO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9BureauSMV8LogLevelO1loiySbAC_ACtFZ",
+            "mangledName": "$s9BureauSMV8LogLevelO1loiySbAC_ACtFZ",
+            "moduleName": "BureauSMV",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "BureauSMV.LogLevel?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LogLevel",
+                    "printedName": "BureauSMV.LogLevel",
+                    "usr": "s:9BureauSMV8LogLevelO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9BureauSMV8LogLevelO8rawValueACSgSi_tcfc",
+            "mangledName": "$s9BureauSMV8LogLevelO8rawValueACSgSi_tcfc",
+            "moduleName": "BureauSMV",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9BureauSMV8LogLevelO8rawValueSivp",
+            "mangledName": "$s9BureauSMV8LogLevelO8rawValueSivp",
+            "moduleName": "BureauSMV",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9BureauSMV8LogLevelO8rawValueSivg",
+                "mangledName": "$s9BureauSMV8LogLevelO8rawValueSivg",
+                "moduleName": "BureauSMV",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:9BureauSMV8LogLevelO",
+        "mangledName": "$s9BureauSMV8LogLevelO",
+        "moduleName": "BureauSMV",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "Int",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Comparable",
+            "printedName": "Comparable",
+            "usr": "s:SL",
+            "mangledName": "$sSL"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "BureauLogger",
+        "printedName": "BureauLogger",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "shared",
+            "printedName": "shared",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "BureauLogger",
+                "printedName": "BureauSMV.BureauLogger",
+                "usr": "s:9BureauSMV0A6LoggerC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9BureauSMV0A6LoggerC6sharedACvpZ",
+            "mangledName": "$s9BureauSMV0A6LoggerC6sharedACvpZ",
+            "moduleName": "BureauSMV",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "BureauLogger",
+                    "printedName": "BureauSMV.BureauLogger",
+                    "usr": "s:9BureauSMV0A6LoggerC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9BureauSMV0A6LoggerC6sharedACvgZ",
+                "mangledName": "$s9BureauSMV0A6LoggerC6sharedACvgZ",
+                "moduleName": "BureauSMV",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "setLogLevel",
+            "printedName": "setLogLevel(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LogLevel",
+                "printedName": "BureauSMV.LogLevel",
+                "usr": "s:9BureauSMV8LogLevelO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9BureauSMV0A6LoggerC11setLogLevelyyAA0eF0OF",
+            "mangledName": "$s9BureauSMV0A6LoggerC11setLogLevelyyAA0eF0OF",
+            "moduleName": "BureauSMV",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getLogLevel",
+            "printedName": "getLogLevel()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LogLevel",
+                "printedName": "BureauSMV.LogLevel",
+                "usr": "s:9BureauSMV8LogLevelO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9BureauSMV0A6LoggerC11getLogLevelAA0eF0OyF",
+            "mangledName": "$s9BureauSMV0A6LoggerC11getLogLevelAA0eF0OyF",
+            "moduleName": "BureauSMV",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "log",
+            "printedName": "log(message:errorCode:type:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LogLevel",
+                "printedName": "BureauSMV.LogLevel",
+                "hasDefaultArg": true,
+                "usr": "s:9BureauSMV8LogLevelO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9BureauSMV0A6LoggerC3log7message9errorCode4typeySS_SiSgAA8LogLevelOtF",
+            "mangledName": "$s9BureauSMV0A6LoggerC3log7message9errorCode4typeySS_SiSgAA8LogLevelOtF",
+            "moduleName": "BureauSMV",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:9BureauSMV0A6LoggerC",
+        "mangledName": "$s9BureauSMV0A6LoggerC",
+        "moduleName": "BureauSMV",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BureauSMV",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Network",
+        "printedName": "Network",
+        "declKind": "Import",
+        "moduleName": "BureauSMV"
+      },
+      {
+        "kind": "Import",
+        "name": "Darwin",
+        "printedName": "Darwin",
+        "declKind": "Import",
+        "moduleName": "BureauSMV"
       },
       {
         "kind": "Import",
@@ -5941,23 +6823,44 @@
   },
   "ConstValues": [
     {
+      "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/LogManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 441,
+      "length": 4,
+      "value": "1000"
+    },
+    {
+      "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/LogManager.swift",
+      "kind": "Array",
+      "offset": 482,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/LogManager.swift",
+      "kind": "StringLiteral",
+      "offset": 530,
+      "length": 28,
+      "value": "\"com.bureau.demo.logmanager\""
+    },
+    {
       "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Utility.swift",
       "kind": "StringLiteral",
-      "offset": 4511,
+      "offset": 4767,
       "length": 3,
       "value": "\" \""
     },
     {
       "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Utility.swift",
       "kind": "StringLiteral",
-      "offset": 4537,
+      "offset": 4793,
       "length": 4,
       "value": "\"\n\""
     },
     {
       "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Utility.swift",
       "kind": "BooleanLiteral",
-      "offset": 4836,
+      "offset": 6656,
       "length": 4,
       "value": "true"
     },
@@ -5978,37 +6881,114 @@
     {
       "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/NetworkReachability.swift",
       "kind": "BooleanLiteral",
-      "offset": 2608,
+      "offset": 2638,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/NetworkReachability.swift",
       "kind": "BooleanLiteral",
-      "offset": 2657,
+      "offset": 2687,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/ConnectionManager.swift",
       "kind": "StringLiteral",
-      "offset": 168,
-      "length": 5,
-      "value": "\"2.0\""
+      "offset": 158,
+      "length": 7,
+      "value": "\"1.0.1\""
     },
     {
       "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/ConnectionManager.swift",
       "kind": "FloatLiteral",
-      "offset": 554,
+      "offset": 546,
       "length": 3,
       "value": "5.0"
     },
     {
       "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/ConnectionManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 590,
+      "offset": 582,
       "length": 2,
       "value": "10"
+    },
+    {
+      "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Logger.swift",
+      "kind": "IntegerLiteral",
+      "offset": 382,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Logger.swift",
+      "kind": "IntegerLiteral",
+      "offset": 401,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Logger.swift",
+      "kind": "IntegerLiteral",
+      "offset": 422,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Logger.swift",
+      "kind": "IntegerLiteral",
+      "offset": 440,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Logger.swift",
+      "kind": "IntegerLiteral",
+      "offset": 459,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Logger.swift",
+      "kind": "IntegerLiteral",
+      "offset": 480,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/IPv6PrioritizedDNS.swift",
+      "kind": "Dictionary",
+      "offset": 889,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/IPv6PrioritizedDNS.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1002,
+      "length": 3,
+      "value": "300"
+    },
+    {
+      "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/IPv6PrioritizedDNS.swift",
+      "kind": "StringLiteral",
+      "offset": 1063,
+      "length": 35,
+      "value": "\"com.keyvalue.bureau.ipv6dns.cache\""
+    },
+    {
+      "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/IPv6PrioritizedDNS.swift",
+      "kind": "StringLiteral",
+      "offset": 1191,
+      "length": 38,
+      "value": "\"com.keyvalue.bureau.ipv6dns.cellular\""
+    },
+    {
+      "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/IPv6PrioritizedDNS.swift",
+      "kind": "FloatLiteral",
+      "offset": 3201,
+      "length": 3,
+      "value": "2.5"
     },
     {
       "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
