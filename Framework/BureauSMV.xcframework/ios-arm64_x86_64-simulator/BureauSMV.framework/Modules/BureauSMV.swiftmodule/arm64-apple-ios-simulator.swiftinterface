@@ -39,11 +39,12 @@ public struct ConnectionResponse {
     public func build() -> BureauSMV.BureauAuth
     @objc deinit
   }
+  @available(*, deprecated, message: "Use `public func makeAuthCall(mobile: String, correlationId: String, completion: @escaping (AuthenticationStatus) -> Void)` instead")
   public func makeAuthCall(mobile: Swift.String, correlationId: Swift.String) -> BureauSMV.AuthenticationStatus
   public func makeAuthCall(mobile: Swift.String, correlationId: Swift.String, completion: @escaping (BureauSMV.AuthenticationStatus) -> Swift.Void)
   @available(iOS 13.0, *)
   public func makeAuthCallAsync(mobile: Swift.String, correlationId: Swift.String) async -> BureauSMV.AuthenticationStatus
-  @available(*, deprecated, message: "Use `makeAuthCall(mobile: String, correlationId: String) -> AuthenticationStatus` instead")
+  @available(*, deprecated, message: "Use `public func makeAuthCall(mobile: String, correlationId: String, completion: @escaping (AuthenticationStatus) -> Void)` instead")
   public func makeAuthCall(mobile: Swift.String, correlationId: Swift.String) -> Swift.Bool
   @objc deinit
 }
@@ -94,6 +95,7 @@ public struct BureauErrorMessages {
   public static let wifiDetectedAndNoDataNetwork: Swift.String
   public static let completed: Swift.String
   public static let unknown: Swift.String
+  public static let timeoutError: Swift.String
 }
 public enum AuthenticationStatus : Swift.Equatable {
   case networkAndOperatorMismatch(Swift.String)
@@ -112,6 +114,7 @@ public enum AuthenticationStatus : Swift.Equatable {
   case internalServerError(Swift.String)
   case networkUnavailable(Swift.String)
   case wifiDetectedAndNoDataNetwork(Swift.String)
+  case timeout(Swift.String)
   case completed(Swift.String)
   case unknown(Swift.String)
   public static func == (a: BureauSMV.AuthenticationStatus, b: BureauSMV.AuthenticationStatus) -> Swift.Bool

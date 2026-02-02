@@ -890,8 +890,10 @@
             "usr": "s:9BureauSMV0A4AuthC04makeC4Call6mobile13correlationIdAA20AuthenticationStatusOSS_SStF",
             "mangledName": "$s9BureauSMV0A4AuthC04makeC4Call6mobile13correlationIdAA20AuthenticationStatusOSS_SStF",
             "moduleName": "BureauSMV",
+            "deprecated": true,
             "declAttributes": [
               "AccessControl",
+              "Available",
               "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
@@ -2672,6 +2674,53 @@
                 "accessorKind": "get"
               }
             ]
+          },
+          {
+            "kind": "Var",
+            "name": "timeoutError",
+            "printedName": "timeoutError",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9BureauSMV0A13ErrorMessagesV07timeoutC0SSvpZ",
+            "mangledName": "$s9BureauSMV0A13ErrorMessagesV07timeoutC0SSvpZ",
+            "moduleName": "BureauSMV",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9BureauSMV0A13ErrorMessagesV07timeoutC0SSvgZ",
+                "mangledName": "$s9BureauSMV0A13ErrorMessagesV07timeoutC0SSvgZ",
+                "moduleName": "BureauSMV",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
           }
         ],
         "declKind": "Struct",
@@ -3548,6 +3597,59 @@
             "usr": "s:9BureauSMV20AuthenticationStatusO28wifiDetectedAndNoDataNetworkyACSScACmF",
             "mangledName": "$s9BureauSMV20AuthenticationStatusO28wifiDetectedAndNoDataNetworkyACSScACmF",
             "moduleName": "BureauSMV"
+          },
+          {
+            "kind": "Var",
+            "name": "timeout",
+            "printedName": "timeout",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BureauSMV.AuthenticationStatus.Type) -> (Swift.String) -> BureauSMV.AuthenticationStatus",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> BureauSMV.AuthenticationStatus",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AuthenticationStatus",
+                        "printedName": "BureauSMV.AuthenticationStatus",
+                        "usr": "s:9BureauSMV20AuthenticationStatusO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BureauSMV.AuthenticationStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AuthenticationStatus",
+                        "printedName": "BureauSMV.AuthenticationStatus",
+                        "usr": "s:9BureauSMV20AuthenticationStatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9BureauSMV20AuthenticationStatusO7timeoutyACSScACmF",
+            "mangledName": "$s9BureauSMV20AuthenticationStatusO7timeoutyACSScACmF",
+            "moduleName": "BureauSMV",
+            "declAttributes": [
+              "RawDocComment"
+            ]
           },
           {
             "kind": "Var",
@@ -6914,6 +7016,55 @@
       "value": "10"
     },
     {
+      "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/ConnectionManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 938,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/ConnectionManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1483,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/ConnectionManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 14901,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/ConnectionManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 15014,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/ConnectionManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 15036,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/ConnectionManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 25176,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/ConnectionManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 25198,
+      "length": 1,
+      "value": "1"
+    },
+    {
       "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Logger.swift",
       "kind": "IntegerLiteral",
       "offset": 382,
@@ -6994,258 +7145,272 @@
       "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "StringLiteral",
       "offset": 363,
-      "length": 54,
-      "value": "\"User verification failed. Providers failed to verify\""
+      "length": 47,
+      "value": "\"Provider of user's IP and MSISDN do not match\""
     },
     {
       "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 454,
+      "offset": 447,
       "length": 62,
       "value": "\"User verification failed. Please retry with AuthFinalize API\""
     },
     {
       "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 561,
+      "offset": 554,
       "length": 52,
       "value": "\"User's IP doesn't belong to any supported provider\""
     },
     {
       "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 659,
+      "offset": 652,
       "length": 56,
       "value": "\"User's MSISDN doesn't belong to any supported provider\""
     },
     {
       "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 771,
+      "offset": 764,
       "length": 61,
       "value": "\"User's ip and msisdn don't belong to any supported provider\""
     },
     {
       "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 878,
+      "offset": 871,
       "length": 35,
       "value": "\"Awaiting provider acknowledgement\""
     },
     {
       "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 959,
+      "offset": 952,
       "length": 44,
       "value": "\"Required parameters are missing or invalid\""
     },
     {
       "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1058,
+      "offset": 1051,
       "length": 26,
       "value": "\"Duplicate correlation id\""
     },
     {
       "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1132,
+      "offset": 1125,
       "length": 57,
       "value": "\"Previous requests were not fulfilled or ended in errors\""
     },
     {
       "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1233,
+      "offset": 1226,
       "length": 49,
       "value": "\"Cannot associate the correlation id with a flow\""
     },
     {
       "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1331,
+      "offset": 1324,
       "length": 27,
       "value": "\"Illegal application state\""
     },
     {
       "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1398,
+      "offset": 1391,
       "length": 30,
       "value": "\"Signals are empty or invalid\""
     },
     {
       "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1467,
+      "offset": 1460,
       "length": 49,
       "value": "\"Authorization parameters are missing or invalid\""
     },
     {
       "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1558,
+      "offset": 1551,
       "length": 23,
       "value": "\"Auth state is expired\""
     },
     {
       "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1627,
+      "offset": 1620,
       "length": 46,
       "value": "\"Rate limit exceeded. Please try again later.\""
     },
     {
       "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1718,
+      "offset": 1711,
       "length": 33,
       "value": "\"Country code is not enabled yet\""
     },
     {
       "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1796,
+      "offset": 1789,
       "length": 23,
       "value": "\"Internal server error\""
     },
     {
       "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1864,
+      "offset": 1857,
       "length": 21,
       "value": "\"Network unavailable\""
     },
     {
       "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1939,
+      "offset": 1932,
       "length": 35,
       "value": "\"WiFi detected and no data network\""
     },
     {
       "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2009,
+      "offset": 2002,
       "length": 11,
       "value": "\"Completed\""
     },
     {
       "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2053,
+      "offset": 2046,
       "length": 24,
       "value": "\"Unknown error occurred\""
     },
     {
       "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 16327,
+      "offset": 2108,
+      "length": 17,
+      "value": "\"Timeout expired\""
+    },
+    {
+      "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 16566,
       "length": 6,
       "value": "\"code\""
     },
     {
       "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 16446,
+      "offset": 16685,
       "length": 9,
       "value": "\"message\""
     },
     {
       "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 16609,
+      "offset": 16848,
       "length": 10,
       "value": "\"clientId\""
     },
     {
       "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 16739,
+      "offset": 16978,
       "length": 6,
       "value": "\"data\""
     },
     {
       "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 16873,
+      "offset": 17112,
       "length": 15,
       "value": "\"correlationId\""
     },
     {
       "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 17002,
+      "offset": 17241,
       "length": 15,
       "value": "\"transactionId\""
     },
     {
       "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 17112,
+      "offset": 17351,
       "length": 13,
       "value": "\"callbackUrl\""
     },
     {
       "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 17313,
+      "offset": 17552,
       "length": 13,
       "value": "\"http_status\""
     },
     {
       "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 17439,
+      "offset": 17678,
       "length": 15,
       "value": "\"response_body\""
     },
     {
       "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 17576,
+      "offset": 17815,
       "length": 19,
       "value": "\"response_raw_body\""
     },
     {
       "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 17679,
+      "offset": 17918,
       "length": 7,
       "value": "\"error\""
     },
     {
       "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 17793,
+      "offset": 18032,
       "length": 19,
       "value": "\"error_description\""
     },
     {
       "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 19031,
+      "offset": 18090,
+      "length": 22,
+      "value": "\"sdk_connection_error\""
+    },
+    {
+      "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 19563,
       "length": 987,
       "value": "\"-----BEGIN PUBLIC KEY-----\nMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA2ztwamawYMvBd2Hq5YSS\nDo8hfy8e71g9nA\/+z0\/flHWFRsPercqmIpEFkOGE8YEGWJlhtXBZJ\/XbpQICKZpS\nXye8hNNFvjstKZkHIjx37dDmGnU0GnVDJxnJc+RE37WqJse21rGbitAPmMUvlXXC\njGSygjd4v3v\/uZSIwCelWUTVE1g6iWm2ByyfWL0iYfHyEABrGs2cdvxvKnMkIf10\nKKYUo7QvIzgOGE2hQOgJU40lNNREY0odeIb+i59FsixxpAXKFjB3U6c5WZdvQz4N\nCmDg8cOVIed\/nqHw\/Limxtwpz45GnZsDqGSsr0\/Ig7t\/+C8qdzVxaVbwvZzt99cU\n3CQsT5RnsJGI8fXZ\/MgQxWi0O7iIbmKYGYj1mfbqn1IQLd6MBT6+Ih+ECy7v7Vo2\nRIG5Cz5YskAPN50SjkOCtfVC\/0CL4qJJgA9L+jlGIeAg0WbwdbuJWzemYoeZvKWp\n44gfGDNQRWRZShRSXad8BquilyYXcsYl0tACCs13uvm5VkL\/GVIdH8yasPShQpNG\nzgq\/tmfjjE55ynrxlCrfayjH8XUYAk5j4+HLcgtNrHMekwwlflJ7+04We+HPnSJT\n8ZubvTm+CzFKe89w6Hr5dmabM9JqplFDCqALXrBfTUy61wpFwwgV3HVkhlFpzdjI\nHL7faDJCMjCXxlUd1X04eOECAwEAAQ==\n-----END PUBLIC KEY-----\""
     },
     {
       "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 20048,
+      "offset": 20580,
       "length": 987,
       "value": "\"-----BEGIN PUBLIC KEY-----\nMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAriaWxZ4m+bR\/J\/\/WwvGw\nT7CoA0CoU5Lm+i5EB5WVYuYwGS3JXvBNT1BsisglYI6GSvvRdmLXrR2jmuPKfM0X\n49ddk3mzbuHmGgiloYe\/xL1hCcgxfIpIGS+v60nVeqaaDN3d+rxkcs4To+31Qy3G\nTTag5CPPI8hHAbooB4dT+920JKeNOrr3NPpOjVtnpJufvpOgC5r8EzTpmyoUR+Cw\nEgVukdweSgRPJk74sEoEpPjI3FB4Xk3GLJaNDqerv47P2duVRxeqvNo3ffpNhQHz\nFpOUoii0l9\/tNq32haRmvaimQdj9fAscGpeVkvaz\/Hn0u7WcpmUdrc6sN8sQ57hr\nPpBGhG6eSTySBr4LgwPTn0PqZq5AIur45\/e2tx44cnVP6HlNW9pGSE4VB5h8peuP\nk3mCaxb++UssHQmDdTwPGABHWDNAqrA4dh39fy1ZhOyFGU1jNjVA3D\/nwjHl4a4n\nRagocW6oG0T43hHojetXQA+ve2DqJmGYJ9ckVQwEAypdada3P2Ggg6slG\/K\/oE+5\nT51C0zdJqJ2J7gS02tnNKDoWQ+YGspPG6TbA8FkaO2G2YRz3tgMvgjpW1TeseEmM\nxwAVisaT\/ADh\/rSEACAOww5yNCrPDi2XUtt3lrdvT4uOJz8novqxbH02ulpBjxb5\n+mYXqhx1qdP+kt9k4n\/Iej0CAwEAAQ==\n-----END PUBLIC KEY-----\""
     },
     {
       "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 21065,
+      "offset": 21597,
       "length": 987,
       "value": "\"-----BEGIN PUBLIC KEY-----\nMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA6eSPgvCtRqBby3hdrg5K\nDwvZRKDflakwFWFhtr9A148GkfT25p\/QnxRbwpbYQRz1XkhNmqjE4IzC4o+HcaPB\nyZYl\/H9tmEacONwZvZNuxiW6gFXCLQEZVIZGYNb+mdTVLGXKVeuJ97VpQ64mY2eX\neQs5hQ8Pil39fay+Tw45UjqERF9CGY+OyM2kNTDfx++MN8t+AWziq2U6JZh2iPVy\nTEA8RGc34GEISu9vCkXXkU6NXjS9NoWAvqQ2hv0Y36+BGH3Y42UGEvz1bsgenDnx\nedCegq5CNSLTosjxri1oVtRRYbxtgmLtHK7wpVN6M1Fnr0Ao9JAuTB9i9ZhOKg3h\nI289UwXsvJnS1kE8kVRD6sd3Nt1I+\/cWMjpUv6q0GyO0ymiCz\/XoZRaokIzY\/qZT\n6NDxkAS3jethGQbph+Quv8\/idl5ihUMXi8+XlD69o31yigP+RFADihHHv\/iefq\/z\nJ13xAzRRuVDFWPJb2x5e55ydO6rJ4FEMgRvaJpMLMq5KneNZfEh+vOkC\/9YF8p7V\nR9lQKr2Hnpl9dJ67V\/FeeGqGiiLGEDVXGMJ9o7vqx8MvUDDLPffwws0t8O3C1n\/y\nuO8Q7pYvZMJlV4M5i22gw3izzv2b43EB\/WX2Vr2aUxMZiRZMDICjDE4476sG0oig\nKl9ANyG8pqbQ9yHXF\/YWIrsCAwEAAQ==\n-----END PUBLIC KEY-----\""
     },
     {
       "filePath": "\/Users\/suryakantsharma\/Workspace\/SDK-iOS\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 22082,
+      "offset": 22614,
       "length": 988,
       "value": "\"-----BEGIN PUBLIC KEY-----\nMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA2ztwamawYMvBd2Hq5YSS\nDo8hfy8e71g9nA\/+z0\/flHWFRsPercqmIpEFkOGE8YEGWJlhtXBZJ\/XbpQICKZpS\nXye8hNNFvjstKZkHIjx37dDmGnU0GnVDJxnJc+RE37WqJse21rGbitAPmMUvlXXC\njGSygjd4v3v\/uZSIwCelWUTVE1g6iWm2ByyfWL0iYfHyEABrGs2cdvxvKnMkIf10\nKKYUo7QvIzgOGE2hQOgJU40lNNREY0odeIb+i59FsixxpAXKFjB3U6c5WZdvQz4N\nCmDg8cOVIed\/nQhw\/Limxtwpz45GnZsDqGSsr0\/Ig7t\/+C8qdzVxaVbwvZzt99cU\n3CQsT5RnsJGI8fXZ\/MgQxWiOO7iIbmKYGYj1mfbqn1IQLd6MBT66+iH+ECy7v7Vo2\nRIG5Cz5YskAPN50SjkOCtfvc\/0CL4qJJgA9L+jlGIeAg0WbwdbuJWzemYoeZvKWp\n44gfGDNQRWRZShRSXad8BquilyYXcsYl0tACCs13uvm5VkL\/GVIdH8yasPShQpNG\nzgq\/tmfjjE55ynrxlCrfayjH8XUYAk5j4+HLcgtNrHMekwwlflJ7+04We+HPnSJT\n8ZubvTm+CzFKe89w6Hr5dmabM9JqplFDCqALXrBfTUy61wpFwwgV3HVkhlFpzdjI\nHL7faDJCMjCXxlUd1X04eOECAwEAAQ==\n-----END PUBLIC KEY-----\""
     },
