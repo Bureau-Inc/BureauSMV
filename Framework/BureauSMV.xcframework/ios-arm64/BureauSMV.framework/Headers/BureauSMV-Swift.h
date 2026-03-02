@@ -281,6 +281,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import Foundation;
+@import ObjectiveC;
 #endif
 
 #endif
@@ -302,6 +304,361 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 #if defined(__OBJC__)
+
+enum AuthenticationStatusCode : NSInteger;
+@class NSString;
+/// Objective-C compatible result type for authentication calls (status code + message).
+SWIFT_CLASS("_TtC9BureauSMV20AuthenticationResult")
+@interface AuthenticationResult : NSObject
+@property (nonatomic, readonly) enum AuthenticationStatusCode statusCode;
+@property (nonatomic, readonly, copy) NSString * _Nonnull message;
+@property (nonatomic, readonly, copy) NSString * _Nonnull alertTitle;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+/// Objective-C compatible status code for authentication results.
+/// Maps to Bureau API codes where applicable; negative/zero values for success and runtime conditions.
+typedef SWIFT_ENUM(NSInteger, AuthenticationStatusCode, open) {
+  AuthenticationStatusCodeCompleted = 0,
+  AuthenticationStatusCodeNetworkUnavailable = -1,
+  AuthenticationStatusCodeWifiDetectedAndNoDataNetwork = -2,
+  AuthenticationStatusCodeUnknown = -3,
+  AuthenticationStatusCodeTimeout = -4,
+  AuthenticationStatusCodeNetworkAndOperatorMismatch = 200100,
+  AuthenticationStatusCodeNetworkNotSupported = 200102,
+  AuthenticationStatusCodeOperatorNotSupported = 200103,
+  AuthenticationStatusCodeOperatorAndNetworkNotSupported = 200104,
+  AuthenticationStatusCodeAwaitingProviderAck = 202100,
+  AuthenticationStatusCodeAuthValidationError = 400100,
+  AuthenticationStatusCodeDuplicateCorrelationId = 400101,
+  AuthenticationStatusCodeAuthFailure = 400102,
+  AuthenticationStatusCodeIntegrationFailure = 400103,
+  AuthenticationStatusCodeUnauthorized = 401100,
+  AuthenticationStatusCodeAuthStateExpired = 410100,
+  AuthenticationStatusCodeCountryNotSupported = 422109,
+  AuthenticationStatusCodeRateLimitExceeded = 429100,
+  AuthenticationStatusCodeInternalServerError = 500100,
+};
+
+SWIFT_CLASS("_TtC9BureauSMV10BureauAuth")
+@interface BureauAuth : NSObject
+/// Objective-C compatible authentication call. Completion receives status code (AuthenticationStatusCode rawValue) and message.
+/// \param mobile Mobile number with country code
+///
+/// \param correlationId Unique identifier for this request
+///
+/// \param completion Called on a background queue with (statusCode, message)
+///
+- (void)makeAuthCallWithMobile:(NSString * _Nonnull)mobile correlationId:(NSString * _Nonnull)correlationId completion:(void (^ _Nonnull)(AuthenticationResult * _Nonnull))completion;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+SWIFT_CLASS("_TtCC9BureauSMV10BureauAuth7Builder")
+@interface Builder : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+enum Mode : NSInteger;
+enum LogLevel : NSInteger;
+/// Objective-C compatible builder for BureauAuth. Use this from Objective-C; Swift code can use BureauAuth.Builder.
+SWIFT_CLASS("_TtC9BureauSMV17BureauAuthBuilder")
+@interface BureauAuthBuilder : Builder
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)setClientId:(NSString * _Nonnull)clientId SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)setCallBackUrl:(NSString * _Nonnull)callBackUrl SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)setTimeout:(NSInteger)timeoutInSeconds SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)setMode:(enum Mode)mode SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)disableWifiSwitchOver SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)setLogLevel:(enum LogLevel)level SWIFT_WARN_UNUSED_RESULT;
+- (BureauAuth * _Nonnull)build SWIFT_WARN_UNUSED_RESULT;
+@end
+
+/// Default configuration values for Bureau SDK (Objective-C visible)
+SWIFT_CLASS("_TtC9BureauSMV14BureauDefaults")
+@interface BureauDefaults : NSObject
+/// Production API base URL
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull productionBaseURL;)
++ (NSString * _Nonnull)productionBaseURL SWIFT_WARN_UNUSED_RESULT;
+/// Sandbox API base URL
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull sandboxBaseURL;)
++ (NSString * _Nonnull)sandboxBaseURL SWIFT_WARN_UNUSED_RESULT;
+/// Initiate API endpoint path
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull initiateEndpoint;)
++ (NSString * _Nonnull)initiateEndpoint SWIFT_WARN_UNUSED_RESULT;
+/// UserInfo API endpoint path
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull userInfoEndpoint;)
++ (NSString * _Nonnull)userInfoEndpoint SWIFT_WARN_UNUSED_RESULT;
+/// Default timeout in seconds for API requests
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger defaultTimeoutSeconds;)
++ (NSInteger)defaultTimeoutSeconds SWIFT_WARN_UNUSED_RESULT;
+/// Minimum timeout in seconds (for validation)
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger minTimeoutSeconds;)
++ (NSInteger)minTimeoutSeconds SWIFT_WARN_UNUSED_RESULT;
+/// Maximum timeout in seconds (for validation)
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger maxTimeoutSeconds;)
++ (NSInteger)maxTimeoutSeconds SWIFT_WARN_UNUSED_RESULT;
+/// Default timeout for UserInfo API in seconds
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger userInfoTimeoutSeconds;)
++ (NSInteger)userInfoTimeoutSeconds SWIFT_WARN_UNUSED_RESULT;
+/// Default client ID for testing
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull defaultTestClientId;)
++ (NSString * _Nonnull)defaultTestClientId SWIFT_WARN_UNUSED_RESULT;
+/// Default client secret for testing
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull defaultTestClientSecret;)
++ (NSString * _Nonnull)defaultTestClientSecret SWIFT_WARN_UNUSED_RESULT;
+/// Default test phone number
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull defaultTestPhoneNumber;)
++ (NSString * _Nonnull)defaultTestPhoneNumber SWIFT_WARN_UNUSED_RESULT;
+/// Default country code for phone numbers
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull defaultCountryCode;)
++ (NSString * _Nonnull)defaultCountryCode SWIFT_WARN_UNUSED_RESULT;
+/// Default phone number placeholder text
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull phoneNumberPlaceholder;)
++ (NSString * _Nonnull)phoneNumberPlaceholder SWIFT_WARN_UNUSED_RESULT;
+/// Minimum phone number length (digits only)
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger minPhoneNumberLength;)
++ (NSInteger)minPhoneNumberLength SWIFT_WARN_UNUSED_RESULT;
+/// Maximum phone number length (digits only)
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger maxPhoneNumberLength;)
++ (NSInteger)maxPhoneNumberLength SWIFT_WARN_UNUSED_RESULT;
+/// Minimum credential length (Client ID / Secret)
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger minCredentialLength;)
++ (NSInteger)minCredentialLength SWIFT_WARN_UNUSED_RESULT;
+/// Valid starting digits for Indian mobile numbers
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSArray<NSString *> * _Nonnull validPhoneStartDigits;)
++ (NSArray<NSString *> * _Nonnull)validPhoneStartDigits SWIFT_WARN_UNUSED_RESULT;
+/// HTTP method for GET requests
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull httpMethodGet;)
++ (NSString * _Nonnull)httpMethodGet SWIFT_WARN_UNUSED_RESULT;
+/// Content type for JSON
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull contentTypeJSON;)
++ (NSString * _Nonnull)contentTypeJSON SWIFT_WARN_UNUSED_RESULT;
+/// Authorization header key
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull authorizationHeaderKey;)
++ (NSString * _Nonnull)authorizationHeaderKey SWIFT_WARN_UNUSED_RESULT;
+/// Basic authentication scheme prefix
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull basicAuthScheme;)
++ (NSString * _Nonnull)basicAuthScheme SWIFT_WARN_UNUSED_RESULT;
+/// Maximum retry attempts for 202100 (awaiting provider ack)
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger maxRetryAttempts;)
++ (NSInteger)maxRetryAttempts SWIFT_WARN_UNUSED_RESULT;
+/// Retry delay in seconds
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger retryDelaySeconds;)
++ (NSInteger)retryDelaySeconds SWIFT_WARN_UNUSED_RESULT;
+/// Success status code
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger httpStatusSuccess;)
++ (NSInteger)httpStatusSuccess SWIFT_WARN_UNUSED_RESULT;
+/// Bad request status code
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger httpStatusBadRequest;)
++ (NSInteger)httpStatusBadRequest SWIFT_WARN_UNUSED_RESULT;
+/// Unauthorized status code
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger httpStatusUnauthorized;)
++ (NSInteger)httpStatusUnauthorized SWIFT_WARN_UNUSED_RESULT;
+/// Timeout status code
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger httpStatusTimeout;)
++ (NSInteger)httpStatusTimeout SWIFT_WARN_UNUSED_RESULT;
+/// Server error status code
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger httpStatusServerError;)
++ (NSInteger)httpStatusServerError SWIFT_WARN_UNUSED_RESULT;
+/// Legacy: Completed status
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) int64_t legacyStatusCompleted;)
++ (int64_t)legacyStatusCompleted SWIFT_WARN_UNUSED_RESULT;
+/// Legacy: Network unavailable
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) int64_t legacyStatusNetworkUnavailable;)
++ (int64_t)legacyStatusNetworkUnavailable SWIFT_WARN_UNUSED_RESULT;
+/// Legacy: On different network (WiFi vs cellular)
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) int64_t legacyStatusDifferentNetwork;)
++ (int64_t)legacyStatusDifferentNetwork SWIFT_WARN_UNUSED_RESULT;
+/// Legacy: Exception occurred
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) int64_t legacyStatusException;)
++ (int64_t)legacyStatusException SWIFT_WARN_UNUSED_RESULT;
+/// Legacy: Unknown status
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) int64_t legacyStatusUnknown;)
++ (int64_t)legacyStatusUnknown SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+/// Demo app specific default values (Objective-C visible)
+SWIFT_CLASS("_TtC9BureauSMV18BureauDemoDefaults")
+@interface BureauDemoDefaults : NSObject
+/// Default timeout for demo app in seconds
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull defaultTimeout;)
++ (NSString * _Nonnull)defaultTimeout SWIFT_WARN_UNUSED_RESULT;
+/// Alert title for Bureau responses
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull alertTitle;)
++ (NSString * _Nonnull)alertTitle SWIFT_WARN_UNUSED_RESULT;
+/// OK button text for alerts
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull alertOKButton;)
++ (NSString * _Nonnull)alertOKButton SWIFT_WARN_UNUSED_RESULT;
+/// Validate button text
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull validateButtonText;)
++ (NSString * _Nonnull)validateButtonText SWIFT_WARN_UNUSED_RESULT;
+/// Client ID label text
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull clientIdLabel;)
++ (NSString * _Nonnull)clientIdLabel SWIFT_WARN_UNUSED_RESULT;
+/// Client Secret label text
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull clientSecretLabel;)
++ (NSString * _Nonnull)clientSecretLabel SWIFT_WARN_UNUSED_RESULT;
+/// Phone Number label text
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull phoneNumberLabel;)
++ (NSString * _Nonnull)phoneNumberLabel SWIFT_WARN_UNUSED_RESULT;
+/// Timeout label text
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull timeoutLabel;)
++ (NSString * _Nonnull)timeoutLabel SWIFT_WARN_UNUSED_RESULT;
+/// Environment label text
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull environmentLabel;)
++ (NSString * _Nonnull)environmentLabel SWIFT_WARN_UNUSED_RESULT;
+/// Sandbox label text
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull sandboxLabel;)
++ (NSString * _Nonnull)sandboxLabel SWIFT_WARN_UNUSED_RESULT;
+/// Production label text
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull productionLabel;)
++ (NSString * _Nonnull)productionLabel SWIFT_WARN_UNUSED_RESULT;
+/// Message for empty client ID
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull emptyClientIdMessage;)
++ (NSString * _Nonnull)emptyClientIdMessage SWIFT_WARN_UNUSED_RESULT;
+/// Message for invalid client ID format
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull invalidClientIdFormatMessage;)
++ (NSString * _Nonnull)invalidClientIdFormatMessage SWIFT_WARN_UNUSED_RESULT;
+/// Message for empty client secret
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull emptyClientSecretMessage;)
++ (NSString * _Nonnull)emptyClientSecretMessage SWIFT_WARN_UNUSED_RESULT;
+/// Message for invalid client secret format
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull invalidClientSecretFormatMessage;)
++ (NSString * _Nonnull)invalidClientSecretFormatMessage SWIFT_WARN_UNUSED_RESULT;
+/// Message for empty phone number
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull emptyPhoneNumberMessage;)
++ (NSString * _Nonnull)emptyPhoneNumberMessage SWIFT_WARN_UNUSED_RESULT;
+/// Message for invalid phone number format
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull invalidPhoneFormatMessage;)
++ (NSString * _Nonnull)invalidPhoneFormatMessage SWIFT_WARN_UNUSED_RESULT;
+/// Message for invalid phone start digit
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull invalidPhoneStartMessage;)
++ (NSString * _Nonnull)invalidPhoneStartMessage SWIFT_WARN_UNUSED_RESULT;
+/// Message for invalid timeout range
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull invalidTimeoutRangeMessage;)
++ (NSString * _Nonnull)invalidTimeoutRangeMessage SWIFT_WARN_UNUSED_RESULT;
+/// Message for timeout too low
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull timeoutTooLowMessage;)
++ (NSString * _Nonnull)timeoutTooLowMessage SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+/// Bureau API error messages (Objective-C visible)
+SWIFT_CLASS("_TtC9BureauSMV19BureauErrorMessages")
+@interface BureauErrorMessages : NSObject
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull networkAndOperatorMismatch;)
++ (NSString * _Nonnull)networkAndOperatorMismatch SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull authFailure;)
++ (NSString * _Nonnull)authFailure SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull networkNotSupported;)
++ (NSString * _Nonnull)networkNotSupported SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull operatorNotSupported;)
++ (NSString * _Nonnull)operatorNotSupported SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull operatorAndNetworkNotSupported;)
++ (NSString * _Nonnull)operatorAndNetworkNotSupported SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull awaitingProviderAck;)
++ (NSString * _Nonnull)awaitingProviderAck SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull authValidationError;)
++ (NSString * _Nonnull)authValidationError SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull duplicateCorrelationIdMessage;)
++ (NSString * _Nonnull)duplicateCorrelationIdMessage SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull previousRequestsFailed;)
++ (NSString * _Nonnull)previousRequestsFailed SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull integrationFailure;)
++ (NSString * _Nonnull)integrationFailure SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull illegalApplicationState;)
++ (NSString * _Nonnull)illegalApplicationState SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull invalidSignals;)
++ (NSString * _Nonnull)invalidSignals SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull unauthorized;)
++ (NSString * _Nonnull)unauthorized SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull authStateExpired;)
++ (NSString * _Nonnull)authStateExpired SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull rateLimitExceeded429;)
++ (NSString * _Nonnull)rateLimitExceeded429 SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull countryNotSupported;)
++ (NSString * _Nonnull)countryNotSupported SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull internalServerError;)
++ (NSString * _Nonnull)internalServerError SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull networkUnavailable;)
++ (NSString * _Nonnull)networkUnavailable SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull wifiDetectedAndNoDataNetwork;)
++ (NSString * _Nonnull)wifiDetectedAndNoDataNetwork SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull completed;)
++ (NSString * _Nonnull)completed SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull unknown;)
++ (NSString * _Nonnull)unknown SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull timeoutError;)
++ (NSString * _Nonnull)timeoutError SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+/// Centralized logging system for Bureau Authentication SDK (Objective-C compatible).
+/// Provides configurable verbosity levels and thread-safe logging.
+SWIFT_CLASS("_TtC9BureauSMV12BureauLogger")
+@interface BureauLogger : NSObject
+/// Shared singleton instance for framework-wide access
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) BureauLogger * _Nonnull shared;)
++ (BureauLogger * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
+/// Private initializer to enforce singleton pattern
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+/// Configure the log level for the logger
+/// \param level The minimum log level to output
+///
+- (void)configureWithLevel:(enum LogLevel)level;
+/// Set the log level (alias for configure)
+/// \param level The minimum log level to output
+///
+- (void)setLogLevel:(enum LogLevel)level;
+/// Get the current log level
+///
+/// returns:
+/// The current configured log level
+- (enum LogLevel)getLogLevel SWIFT_WARN_UNUSED_RESULT;
+/// Single unified logging function
+/// \param message The log message string
+///
+/// \param errorCode Optional error code to append to the log message
+///
+/// \param type The log level/type (error, warning, info, debug, verbose) (defaults to .info)
+///
+- (void)logWithMessage:(NSString * _Nonnull)message errorCode:(NSInteger)errorCode type:(enum LogLevel)type;
+@end
+
+/// Log level enumeration with hierarchical levels (Objective-C compatible).
+/// Levels follow a hierarchical model where enabling a level also enables all higher-priority levels.
+typedef SWIFT_ENUM(NSInteger, LogLevel, open) {
+  LogLevelNone = 0,
+  LogLevelError = 1,
+  LogLevelWarning = 2,
+  LogLevelInfo = 3,
+  LogLevelDebug = 4,
+  LogLevelVerbose = 5,
+};
+
+/// Thread-safe, in-memory log buffer for the current app session.
+SWIFT_CLASS("_TtC9BureauSMV10LogManager")
+@interface LogManager : NSObject
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) LogManager * _Nonnull shared;)
++ (LogManager * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+/// Appends a log line with a timestamp prefix.
+- (void)addLog:(NSString * _Nonnull)message;
+/// Returns a snapshot of all log entries in order.
+- (NSArray<NSString *> * _Nonnull)allLogs SWIFT_WARN_UNUSED_RESULT;
+/// Clears all stored log entries.
+- (void)clear;
+@end
+
+typedef SWIFT_ENUM(NSInteger, Mode, open) {
+  ModeSandbox = 0,
+  ModeProduction = 1,
+};
 
 #endif
 #if __has_attribute(external_source_symbol)

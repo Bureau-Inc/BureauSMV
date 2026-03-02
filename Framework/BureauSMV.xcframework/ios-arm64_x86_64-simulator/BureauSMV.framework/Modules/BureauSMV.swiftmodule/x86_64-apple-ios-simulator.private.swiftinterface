@@ -12,49 +12,53 @@ import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
 import os
-@_hasMissingDesignatedInitializers final public class LogManager {
-  public static let shared: BureauSMV.LogManager
-  final public func addLog(_ message: Swift.String)
-  final public func allLogs() -> [Swift.String]
-  final public func clear()
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers final public class LogManager : ObjectiveC.NSObject {
+  @objc public static let shared: BureauSMV.LogManager
+  @objc final public func addLog(_ message: Swift.String)
+  @objc final public func allLogs() -> [Swift.String]
+  @objc final public func clear()
   @objc deinit
 }
-public struct RedirectResult {
-  public var url: Foundation.URL?
-  public let cookies: [Foundation.HTTPCookie]?
-}
-public struct ConnectionResponse {
-  public var status: Swift.Int
-  public let body: Foundation.Data?
-}
-@_hasMissingDesignatedInitializers public class BureauAuth {
-  public class Builder {
-    public init()
-    public func setClientId(clientId: Swift.String) -> BureauSMV.BureauAuth.Builder
-    public func setCallBackUrl(callBackUrl: Swift.String) -> BureauSMV.BureauAuth.Builder
-    public func setTimeout(timeoutinSeconds: Swift.Int) -> BureauSMV.BureauAuth.Builder
-    public func setMode(mode: BureauSMV.Mode) -> BureauSMV.BureauAuth.Builder
-    public func disableWifiSwitchOver() -> BureauSMV.BureauAuth.Builder
-    public func setLogLevel(_ level: BureauSMV.LogLevel) -> BureauSMV.BureauAuth.Builder
+@objc @_hasMissingDesignatedInitializers @objcMembers public class BureauAuth : ObjectiveC.NSObject {
+  @objc @_inheritsConvenienceInitializers public class Builder : ObjectiveC.NSObject {
+    @objc override dynamic public init()
+    public func setClientId(clientId: Swift.String) -> Self
+    public func setCallBackUrl(callBackUrl: Swift.String) -> Self
+    public func setTimeout(timeoutinSeconds: Swift.Int) -> Self
+    public func setMode(mode: BureauSMV.Mode) -> Self
+    public func disableWifiSwitchOver() -> Self
+    public func setLogLevel(_ level: BureauSMV.LogLevel) -> Self
     public func build() -> BureauSMV.BureauAuth
     @objc deinit
   }
   @available(*, deprecated, message: "Use `public func makeAuthCall(mobile: String, correlationId: String, completion: @escaping (AuthenticationStatus) -> Void)` instead")
-  public func makeAuthCall(mobile: Swift.String, correlationId: Swift.String) -> BureauSMV.AuthenticationStatus
-  public func makeAuthCall(mobile: Swift.String, correlationId: Swift.String, completion: @escaping (BureauSMV.AuthenticationStatus) -> Swift.Void)
+  @nonobjc public func makeAuthCall(mobile: Swift.String, correlationId: Swift.String) -> BureauSMV.AuthenticationStatus
+  @nonobjc public func makeAuthCall(mobile: Swift.String, correlationId: Swift.String, completion: @escaping (BureauSMV.AuthenticationStatus) -> Swift.Void)
   @available(iOS 13.0, *)
-  public func makeAuthCallAsync(mobile: Swift.String, correlationId: Swift.String) async -> BureauSMV.AuthenticationStatus
+  @nonobjc public func makeAuthCallAsync(mobile: Swift.String, correlationId: Swift.String) async -> BureauSMV.AuthenticationStatus
+  @objc public func makeAuthCall(withMobile mobile: Swift.String, correlationId: Swift.String, completion: @escaping (BureauSMV.AuthenticationResult) -> Swift.Void)
   @available(*, deprecated, message: "Use `public func makeAuthCall(mobile: String, correlationId: String, completion: @escaping (AuthenticationStatus) -> Void)` instead")
-  public func makeAuthCall(mobile: Swift.String, correlationId: Swift.String) -> Swift.Bool
+  @nonobjc public func makeAuthCall(mobile: Swift.String, correlationId: Swift.String) -> Swift.Bool
   @objc deinit
 }
-public enum LogLevel : Swift.Int, Swift.Comparable {
-  case none
-  case error
-  case warning
-  case info
-  case debug
-  case verbose
+@objc @_inheritsConvenienceInitializers @objcMembers public class BureauAuthBuilder : BureauSMV.BureauAuth.Builder {
+  @objc override dynamic public init()
+  @objc public func setClientId(_ clientId: Swift.String) -> Self
+  @objc public func setCallBackUrl(_ callBackUrl: Swift.String) -> Self
+  @objc public func setTimeout(_ timeoutInSeconds: Swift.Int) -> Self
+  @objc public func setMode(_ mode: BureauSMV.Mode) -> Self
+  @objc override public func disableWifiSwitchOver() -> Self
+  @objc override public func setLogLevel(_ level: BureauSMV.LogLevel) -> Self
+  @objc override public func build() -> BureauSMV.BureauAuth
+  @objc deinit
+}
+@objc public enum LogLevel : Swift.Int, Swift.Comparable {
+  case none = 0
+  case error = 1
+  case warning = 2
+  case info = 3
+  case debug = 4
+  case verbose = 5
   public static func < (lhs: BureauSMV.LogLevel, rhs: BureauSMV.LogLevel) -> Swift.Bool
   #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
@@ -64,38 +68,39 @@ public enum LogLevel : Swift.Int, Swift.Comparable {
     get
   }
 }
-@_hasMissingDesignatedInitializers public class BureauLogger {
-  public static let shared: BureauSMV.BureauLogger
-  public func setLogLevel(_ level: BureauSMV.LogLevel)
-  public func getLogLevel() -> BureauSMV.LogLevel
-  #if compiler(>=5.3) && $NonescapableTypes
-  public func log(message: Swift.String, errorCode: Swift.Int? = nil, type: BureauSMV.LogLevel = .info)
-  #endif
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class BureauLogger : ObjectiveC.NSObject {
+  @objc public static let shared: BureauSMV.BureauLogger
+  @objc public func configure(level: BureauSMV.LogLevel)
+  @objc public func setLogLevel(_ level: BureauSMV.LogLevel)
+  @objc public func getLogLevel() -> BureauSMV.LogLevel
+  @objc public func log(message: Swift.String, errorCode: Swift.Int = Int.min, type: BureauSMV.LogLevel = .info)
   @objc deinit
 }
-public struct BureauErrorMessages {
-  public static let networkAndOperatorMismatch: Swift.String
-  public static let authFailure: Swift.String
-  public static let networkNotSupported: Swift.String
-  public static let operatorNotSupported: Swift.String
-  public static let operatorAndNetworkNotSupported: Swift.String
-  public static let awaitingProviderAck: Swift.String
-  public static let authValidationError: Swift.String
-  public static let duplicateCorrelationIdMessage: Swift.String
-  public static let previousRequestsFailed: Swift.String
-  public static let integrationFailure: Swift.String
-  public static let illegalApplicationState: Swift.String
-  public static let invalidSignals: Swift.String
-  public static let unauthorized: Swift.String
-  public static let authStateExpired: Swift.String
-  public static let rateLimitExceeded429: Swift.String
-  public static let countryNotSupported: Swift.String
-  public static let internalServerError: Swift.String
-  public static let networkUnavailable: Swift.String
-  public static let wifiDetectedAndNoDataNetwork: Swift.String
-  public static let completed: Swift.String
-  public static let unknown: Swift.String
-  public static let timeoutError: Swift.String
+@objc @_inheritsConvenienceInitializers @objcMembers public class BureauErrorMessages : ObjectiveC.NSObject {
+  @objc public static let networkAndOperatorMismatch: Swift.String
+  @objc public static let authFailure: Swift.String
+  @objc public static let networkNotSupported: Swift.String
+  @objc public static let operatorNotSupported: Swift.String
+  @objc public static let operatorAndNetworkNotSupported: Swift.String
+  @objc public static let awaitingProviderAck: Swift.String
+  @objc public static let authValidationError: Swift.String
+  @objc public static let duplicateCorrelationIdMessage: Swift.String
+  @objc public static let previousRequestsFailed: Swift.String
+  @objc public static let integrationFailure: Swift.String
+  @objc public static let illegalApplicationState: Swift.String
+  @objc public static let invalidSignals: Swift.String
+  @objc public static let unauthorized: Swift.String
+  @objc public static let authStateExpired: Swift.String
+  @objc public static let rateLimitExceeded429: Swift.String
+  @objc public static let countryNotSupported: Swift.String
+  @objc public static let internalServerError: Swift.String
+  @objc public static let networkUnavailable: Swift.String
+  @objc public static let wifiDetectedAndNoDataNetwork: Swift.String
+  @objc public static let completed: Swift.String
+  @objc public static let unknown: Swift.String
+  @objc public static let timeoutError: Swift.String
+  @objc override dynamic public init()
+  @objc deinit
 }
 public enum AuthenticationStatus : Swift.Equatable {
   case networkAndOperatorMismatch(Swift.String)
@@ -137,73 +142,126 @@ extension BureauSMV.AuthenticationStatus {
   #endif
   public static func fromBureauCodeWithCustomMessage(_ code: Swift.Int, customMessage: Swift.String) -> BureauSMV.AuthenticationStatus
 }
-public enum Mode {
-  case sandbox
-  case production
-  public static func == (a: BureauSMV.Mode, b: BureauSMV.Mode) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
+@objc public enum AuthenticationStatusCode : Swift.Int {
+  case completed = 0
+  case networkUnavailable = -1
+  case wifiDetectedAndNoDataNetwork = -2
+  case unknown = -3
+  case timeout = -4
+  case networkAndOperatorMismatch = 200100
+  case networkNotSupported = 200102
+  case operatorNotSupported = 200103
+  case operatorAndNetworkNotSupported = 200104
+  case awaitingProviderAck = 202100
+  case authValidationError = 400100
+  case duplicateCorrelationId = 400101
+  case authFailure = 400102
+  case integrationFailure = 400103
+  case unauthorized = 401100
+  case authStateExpired = 410100
+  case countryNotSupported = 422109
+  case rateLimitExceeded = 429100
+  case internalServerError = 500100
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
     get
   }
 }
-public struct BureauDefaults {
-  public static let productionBaseURL: Swift.String
-  public static let sandboxBaseURL: Swift.String
-  public static let initiateEndpoint: Swift.String
-  public static let userInfoEndpoint: Swift.String
-  public static let defaultTimeoutSeconds: Swift.Int
-  public static let minTimeoutSeconds: Swift.Int
-  public static let maxTimeoutSeconds: Swift.Int
-  public static let userInfoTimeoutSeconds: Swift.Int
-  public static let defaultTestClientId: Swift.String
-  public static let defaultTestClientSecret: Swift.String
-  public static let defaultTestPhoneNumber: Swift.String
-  public static let defaultCountryCode: Swift.String
-  public static let phoneNumberPlaceholder: Swift.String
-  public static let minPhoneNumberLength: Swift.Int
-  public static let maxPhoneNumberLength: Swift.Int
-  public static let minCredentialLength: Swift.Int
-  public static let validPhoneStartDigits: [Swift.String]
-  public static let httpMethodGet: Swift.String
-  public static let contentTypeJSON: Swift.String
-  public static let authorizationHeaderKey: Swift.String
-  public static let basicAuthScheme: Swift.String
-  public static let maxRetryAttempts: Swift.Int
-  public static let retryDelaySeconds: Swift.Int
-  public static let httpStatusSuccess: Swift.Int
-  public static let httpStatusBadRequest: Swift.Int
-  public static let httpStatusUnauthorized: Swift.Int
-  public static let httpStatusTimeout: Swift.Int
-  public static let httpStatusServerError: Swift.Int
-  public static let legacyStatusCompleted: Swift.Int64
-  public static let legacyStatusNetworkUnavailable: Swift.Int64
-  public static let legacyStatusDifferentNetwork: Swift.Int64
-  public static let legacyStatusException: Swift.Int64
-  public static let legacyStatusUnknown: Swift.Int64
+@objc @_hasMissingDesignatedInitializers @objcMembers public class AuthenticationResult : ObjectiveC.NSObject {
+  @objc final public let statusCode: BureauSMV.AuthenticationStatusCode
+  @objc public var message: Swift.String {
+    @objc get
+  }
+  @objc public var alertTitle: Swift.String {
+    @objc get
+  }
+  @objc deinit
 }
-public struct BureauDemoDefaults {
-  public static let defaultTimeout: Swift.String
-  public static let alertTitle: Swift.String
-  public static let alertOKButton: Swift.String
-  public static let validateButtonText: Swift.String
-  public static let clientIdLabel: Swift.String
-  public static let clientSecretLabel: Swift.String
-  public static let phoneNumberLabel: Swift.String
-  public static let timeoutLabel: Swift.String
-  public static let environmentLabel: Swift.String
-  public static let sandboxLabel: Swift.String
-  public static let productionLabel: Swift.String
-  public static let emptyClientIdMessage: Swift.String
-  public static let invalidClientIdFormatMessage: Swift.String
-  public static let emptyClientSecretMessage: Swift.String
-  public static let invalidClientSecretFormatMessage: Swift.String
-  public static let emptyPhoneNumberMessage: Swift.String
-  public static let invalidPhoneFormatMessage: Swift.String
-  public static let invalidPhoneStartMessage: Swift.String
-  public static let invalidTimeoutRangeMessage: Swift.String
-  public static let timeoutTooLowMessage: Swift.String
+extension BureauSMV.AuthenticationStatus {
+  public var toAuthenticationResult: BureauSMV.AuthenticationResult {
+    get
+  }
+}
+@objc public enum Mode : Swift.Int {
+  case sandbox = 0
+  case production = 1
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class BureauDefaults : ObjectiveC.NSObject {
+  @objc public static let productionBaseURL: Swift.String
+  @objc public static let sandboxBaseURL: Swift.String
+  @objc public static let initiateEndpoint: Swift.String
+  @objc public static let userInfoEndpoint: Swift.String
+  @objc public static let defaultTimeoutSeconds: Swift.Int
+  @objc public static let minTimeoutSeconds: Swift.Int
+  @objc public static let maxTimeoutSeconds: Swift.Int
+  @objc public static let userInfoTimeoutSeconds: Swift.Int
+  @objc public static let defaultTestClientId: Swift.String
+  @objc public static let defaultTestClientSecret: Swift.String
+  @objc public static let defaultTestPhoneNumber: Swift.String
+  @objc public static let defaultCountryCode: Swift.String
+  @objc public static let phoneNumberPlaceholder: Swift.String
+  @objc public static let minPhoneNumberLength: Swift.Int
+  @objc public static let maxPhoneNumberLength: Swift.Int
+  @objc public static let minCredentialLength: Swift.Int
+  @objc public static let validPhoneStartDigits: [Swift.String]
+  @objc public static let httpMethodGet: Swift.String
+  @objc public static let contentTypeJSON: Swift.String
+  @objc public static let authorizationHeaderKey: Swift.String
+  @objc public static let basicAuthScheme: Swift.String
+  @objc public static let maxRetryAttempts: Swift.Int
+  @objc public static let retryDelaySeconds: Swift.Int
+  @objc public static let httpStatusSuccess: Swift.Int
+  @objc public static let httpStatusBadRequest: Swift.Int
+  @objc public static let httpStatusUnauthorized: Swift.Int
+  @objc public static let httpStatusTimeout: Swift.Int
+  @objc public static let httpStatusServerError: Swift.Int
+  @objc public static let legacyStatusCompleted: Swift.Int64
+  @objc public static let legacyStatusNetworkUnavailable: Swift.Int64
+  @objc public static let legacyStatusDifferentNetwork: Swift.Int64
+  @objc public static let legacyStatusException: Swift.Int64
+  @objc public static let legacyStatusUnknown: Swift.Int64
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class BureauDemoDefaults : ObjectiveC.NSObject {
+  @objc public static let defaultTimeout: Swift.String
+  @objc public static let alertTitle: Swift.String
+  @objc public static let alertOKButton: Swift.String
+  @objc public static let validateButtonText: Swift.String
+  @objc public static let clientIdLabel: Swift.String
+  @objc public static let clientSecretLabel: Swift.String
+  @objc public static let phoneNumberLabel: Swift.String
+  @objc public static let timeoutLabel: Swift.String
+  @objc public static let environmentLabel: Swift.String
+  @objc public static let sandboxLabel: Swift.String
+  @objc public static let productionLabel: Swift.String
+  @objc public static let emptyClientIdMessage: Swift.String
+  @objc public static let invalidClientIdFormatMessage: Swift.String
+  @objc public static let emptyClientSecretMessage: Swift.String
+  @objc public static let invalidClientSecretFormatMessage: Swift.String
+  @objc public static let emptyPhoneNumberMessage: Swift.String
+  @objc public static let invalidPhoneFormatMessage: Swift.String
+  @objc public static let invalidPhoneStartMessage: Swift.String
+  @objc public static let invalidTimeoutRangeMessage: Swift.String
+  @objc public static let timeoutTooLowMessage: Swift.String
+  @objc override dynamic public init()
+  @objc deinit
 }
 extension BureauSMV.LogLevel : Swift.Hashable {}
 extension BureauSMV.LogLevel : Swift.RawRepresentable {}
+extension BureauSMV.AuthenticationStatusCode : Swift.Equatable {}
+extension BureauSMV.AuthenticationStatusCode : Swift.Hashable {}
+extension BureauSMV.AuthenticationStatusCode : Swift.RawRepresentable {}
 extension BureauSMV.Mode : Swift.Equatable {}
 extension BureauSMV.Mode : Swift.Hashable {}
+extension BureauSMV.Mode : Swift.RawRepresentable {}

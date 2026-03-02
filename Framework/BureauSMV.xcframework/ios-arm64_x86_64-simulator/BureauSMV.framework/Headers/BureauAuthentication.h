@@ -15,6 +15,9 @@ FOUNDATION_EXPORT double BureauAuthenticationVersionNumber;
 //! Project version string for BureauAuthentication.
 FOUNDATION_EXPORT const unsigned char BureauAuthenticationVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <BureauAuthentication/PublicHeader.h>
-
+//
+// Using the SDK from Objective-C:
+// #import <BureauSMV/BureauSMV-Swift.h> or @import BureauSMV;
+// Then use BureauAuthBuilder to build BureauAuth, and call makeAuthCallWithMobile:correlationId:completion:
+// with a block that receives (NSInteger statusCode, NSString * _Nullable message). statusCode is AuthenticationStatusCode raw value.
 
