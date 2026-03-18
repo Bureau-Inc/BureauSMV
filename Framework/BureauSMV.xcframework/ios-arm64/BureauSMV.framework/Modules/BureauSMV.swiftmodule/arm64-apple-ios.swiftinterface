@@ -7,7 +7,6 @@ import Foundation
 import Network
 import Security
 import Swift
-import UIKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
@@ -34,7 +33,6 @@ import os
   @available(*, deprecated, message: "Use `public func makeAuthCall(mobile: String, correlationId: String, completion: @escaping (AuthenticationStatus) -> Void)` instead")
   @nonobjc public func makeAuthCall(mobile: Swift.String, correlationId: Swift.String) -> BureauSMV.AuthenticationStatus
   @nonobjc public func makeAuthCall(mobile: Swift.String, correlationId: Swift.String, completion: @escaping (BureauSMV.AuthenticationStatus) -> Swift.Void)
-  @available(iOS 13.0, *)
   @nonobjc public func makeAuthCallAsync(mobile: Swift.String, correlationId: Swift.String) async -> BureauSMV.AuthenticationStatus
   @objc public func makeAuthCall(withMobile mobile: Swift.String, correlationId: Swift.String, completion: @escaping (BureauSMV.AuthenticationResult) -> Swift.Void)
   @available(*, deprecated, message: "Use `public func makeAuthCall(mobile: String, correlationId: String, completion: @escaping (AuthenticationStatus) -> Void)` instead")
