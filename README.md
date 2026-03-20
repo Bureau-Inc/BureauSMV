@@ -59,21 +59,21 @@ Open and add the below code to the info.plist file.
     <true/>
     <key>NSExceptionDomains</key>
     <dict>
-        <key>mcext.zumigo.com</key>
+        <key>jio.com</key>
         <dict>
             <key>NSExceptionAllowsInsecureHTTPLoads</key>
             <true/>
             <key>NSIncludesSubdomains</key>
             <true/>
         </dict>
-        <key>passport.airtel.in</key>
+        <key>airtel.in</key>
         <dict>
             <key>NSExceptionAllowsInsecureHTTPLoads</key>
             <true/>
             <key>NSIncludesSubdomains</key>
             <true/>
         </dict>
-        <key>partnerapi.jio.com</key>
+        <key>in-vil.ipification.com</key>
         <dict>
             <key>NSExceptionAllowsInsecureHTTPLoads</key>
             <true/>
