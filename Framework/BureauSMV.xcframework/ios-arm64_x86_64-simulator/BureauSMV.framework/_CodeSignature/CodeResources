@@ -14,11 +14,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		fDLaPUXCXYgYU/x+WCGgk4QA+9s=
+		X6PpJv7Wz9s+Qaoz6WtAyiOPs0Q=
 		</data>
 		<key>Modules/BureauSMV.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		zkIWhXIi132aVvrobZ4+BlXrV8o=
+		6nq0f391hfQLnu0bFVLhofjVWuw=
 		</data>
 		<key>Modules/BureauSMV.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -34,11 +34,11 @@
 		</data>
 		<key>Modules/BureauSMV.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		ysd2dID6aQVVAULc6GBuJ+5lp2M=
+		SyFY6PV4gwEbJnI5MoAX5EDXyK0=
 		</data>
 		<key>Modules/BureauSMV.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		zkIWhXIi132aVvrobZ4+BlXrV8o=
+		6nq0f391hfQLnu0bFVLhofjVWuw=
 		</data>
 		<key>Modules/BureauSMV.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/BureauSMV.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		JlgdumOkOw6K6VhLCWD4oLtzMGk=
+		Eh0K5q1uUDk7iOfJl5ZvYR86fdE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -85,7 +85,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			6l1Xrjl5Akj3WMcT69Y7Gjka02pQlRRen0FxKzTWZgo=
+			NwddENxBegTzaLkfQxT5XEG+f08NpoKq6jAEVK7azXA=
 			</data>
 		</dict>
 		<key>Modules/BureauSMV.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -113,14 +113,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			3av+nO+SbWSItprUKXFmSFVAVWnl9Q2VJRNR5Zm4LCU=
+			5w+A+cydyNatHaVVAJ8DyZ+m0hpIh+aJqhpNynFIrXU=
 			</data>
 		</dict>
 		<key>Modules/BureauSMV.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6l1Xrjl5Akj3WMcT69Y7Gjka02pQlRRen0FxKzTWZgo=
+			NwddENxBegTzaLkfQxT5XEG+f08NpoKq6jAEVK7azXA=
 			</data>
 		</dict>
 		<key>Modules/BureauSMV.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -148,7 +148,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Hlfmxav9NTaeqI3hyt8WRS8C2TbX1Rmy9b+CNB3Bi+A=
+			wo4OsFl4hZcul7bhQTY4bu/yltYGnJJqT0p0DHPBQ/g=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

@@ -9176,7 +9176,7 @@
       "kind": "StringLiteral",
       "offset": 111,
       "length": 7,
-      "value": "\"1.0.5\""
+      "value": "\"1.0.6\""
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/ConnectionManager.swift",
@@ -9475,266 +9475,266 @@
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 16804,
+      "offset": 16821,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 16836,
+      "offset": 16853,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 16879,
+      "offset": 16896,
       "length": 2,
       "value": "-2"
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 16901,
+      "offset": 16918,
       "length": 2,
       "value": "-3"
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 16923,
+      "offset": 16940,
       "length": 2,
       "value": "-4"
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 16964,
+      "offset": 16981,
       "length": 6,
       "value": "200100"
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 17002,
+      "offset": 17019,
       "length": 6,
       "value": "200102"
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 17041,
+      "offset": 17058,
       "length": 6,
       "value": "200103"
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 17090,
+      "offset": 17107,
       "length": 6,
       "value": "200104"
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 17128,
+      "offset": 17145,
       "length": 6,
       "value": "202100"
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 17166,
+      "offset": 17183,
       "length": 6,
       "value": "400100"
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 17207,
+      "offset": 17224,
       "length": 6,
       "value": "400101"
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 17237,
+      "offset": 17254,
       "length": 6,
       "value": "400102"
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 17274,
+      "offset": 17291,
       "length": 6,
       "value": "400103"
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 17305,
+      "offset": 17322,
       "length": 6,
       "value": "401100"
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 17340,
+      "offset": 17357,
       "length": 6,
       "value": "410100"
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 17378,
+      "offset": 17395,
       "length": 6,
       "value": "422109"
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 17414,
+      "offset": 17431,
       "length": 6,
       "value": "429100"
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 17452,
+      "offset": 17469,
       "length": 6,
       "value": "500100"
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 19741,
+      "offset": 19758,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 19765,
+      "offset": 19782,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 19950,
+      "offset": 19967,
       "length": 6,
       "value": "\"code\""
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 20069,
+      "offset": 20086,
       "length": 9,
       "value": "\"message\""
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 20232,
+      "offset": 20249,
       "length": 10,
       "value": "\"clientId\""
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 20362,
+      "offset": 20379,
       "length": 6,
       "value": "\"data\""
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 20496,
+      "offset": 20513,
       "length": 15,
       "value": "\"correlationId\""
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 20625,
+      "offset": 20642,
       "length": 15,
       "value": "\"transactionId\""
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 20735,
+      "offset": 20752,
       "length": 13,
       "value": "\"callbackUrl\""
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 20936,
+      "offset": 20953,
       "length": 13,
       "value": "\"http_status\""
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 21062,
+      "offset": 21079,
       "length": 15,
       "value": "\"response_body\""
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 21199,
+      "offset": 21216,
       "length": 19,
       "value": "\"response_raw_body\""
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 21302,
+      "offset": 21319,
       "length": 7,
       "value": "\"error\""
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 21416,
+      "offset": 21433,
       "length": 19,
       "value": "\"error_description\""
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 21474,
+      "offset": 21491,
       "length": 22,
       "value": "\"sdk_connection_error\""
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 22947,
+      "offset": 22964,
       "length": 987,
       "value": "\"-----BEGIN PUBLIC KEY-----\nMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA2ztwamawYMvBd2Hq5YSS\nDo8hfy8e71g9nA\/+z0\/flHWFRsPercqmIpEFkOGE8YEGWJlhtXBZJ\/XbpQICKZpS\nXye8hNNFvjstKZkHIjx37dDmGnU0GnVDJxnJc+RE37WqJse21rGbitAPmMUvlXXC\njGSygjd4v3v\/uZSIwCelWUTVE1g6iWm2ByyfWL0iYfHyEABrGs2cdvxvKnMkIf10\nKKYUo7QvIzgOGE2hQOgJU40lNNREY0odeIb+i59FsixxpAXKFjB3U6c5WZdvQz4N\nCmDg8cOVIed\/nqHw\/Limxtwpz45GnZsDqGSsr0\/Ig7t\/+C8qdzVxaVbwvZzt99cU\n3CQsT5RnsJGI8fXZ\/MgQxWi0O7iIbmKYGYj1mfbqn1IQLd6MBT6+Ih+ECy7v7Vo2\nRIG5Cz5YskAPN50SjkOCtfVC\/0CL4qJJgA9L+jlGIeAg0WbwdbuJWzemYoeZvKWp\n44gfGDNQRWRZShRSXad8BquilyYXcsYl0tACCs13uvm5VkL\/GVIdH8yasPShQpNG\nzgq\/tmfjjE55ynrxlCrfayjH8XUYAk5j4+HLcgtNrHMekwwlflJ7+04We+HPnSJT\n8ZubvTm+CzFKe89w6Hr5dmabM9JqplFDCqALXrBfTUy61wpFwwgV3HVkhlFpzdjI\nHL7faDJCMjCXxlUd1X04eOECAwEAAQ==\n-----END PUBLIC KEY-----\""
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 23964,
+      "offset": 23981,
       "length": 987,
       "value": "\"-----BEGIN PUBLIC KEY-----\nMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAriaWxZ4m+bR\/J\/\/WwvGw\nT7CoA0CoU5Lm+i5EB5WVYuYwGS3JXvBNT1BsisglYI6GSvvRdmLXrR2jmuPKfM0X\n49ddk3mzbuHmGgiloYe\/xL1hCcgxfIpIGS+v60nVeqaaDN3d+rxkcs4To+31Qy3G\nTTag5CPPI8hHAbooB4dT+920JKeNOrr3NPpOjVtnpJufvpOgC5r8EzTpmyoUR+Cw\nEgVukdweSgRPJk74sEoEpPjI3FB4Xk3GLJaNDqerv47P2duVRxeqvNo3ffpNhQHz\nFpOUoii0l9\/tNq32haRmvaimQdj9fAscGpeVkvaz\/Hn0u7WcpmUdrc6sN8sQ57hr\nPpBGhG6eSTySBr4LgwPTn0PqZq5AIur45\/e2tx44cnVP6HlNW9pGSE4VB5h8peuP\nk3mCaxb++UssHQmDdTwPGABHWDNAqrA4dh39fy1ZhOyFGU1jNjVA3D\/nwjHl4a4n\nRagocW6oG0T43hHojetXQA+ve2DqJmGYJ9ckVQwEAypdada3P2Ggg6slG\/K\/oE+5\nT51C0zdJqJ2J7gS02tnNKDoWQ+YGspPG6TbA8FkaO2G2YRz3tgMvgjpW1TeseEmM\nxwAVisaT\/ADh\/rSEACAOww5yNCrPDi2XUtt3lrdvT4uOJz8novqxbH02ulpBjxb5\n+mYXqhx1qdP+kt9k4n\/Iej0CAwEAAQ==\n-----END PUBLIC KEY-----\""
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 24981,
+      "offset": 24998,
       "length": 987,
       "value": "\"-----BEGIN PUBLIC KEY-----\nMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA6eSPgvCtRqBby3hdrg5K\nDwvZRKDflakwFWFhtr9A148GkfT25p\/QnxRbwpbYQRz1XkhNmqjE4IzC4o+HcaPB\nyZYl\/H9tmEacONwZvZNuxiW6gFXCLQEZVIZGYNb+mdTVLGXKVeuJ97VpQ64mY2eX\neQs5hQ8Pil39fay+Tw45UjqERF9CGY+OyM2kNTDfx++MN8t+AWziq2U6JZh2iPVy\nTEA8RGc34GEISu9vCkXXkU6NXjS9NoWAvqQ2hv0Y36+BGH3Y42UGEvz1bsgenDnx\nedCegq5CNSLTosjxri1oVtRRYbxtgmLtHK7wpVN6M1Fnr0Ao9JAuTB9i9ZhOKg3h\nI289UwXsvJnS1kE8kVRD6sd3Nt1I+\/cWMjpUv6q0GyO0ymiCz\/XoZRaokIzY\/qZT\n6NDxkAS3jethGQbph+Quv8\/idl5ihUMXi8+XlD69o31yigP+RFADihHHv\/iefq\/z\nJ13xAzRRuVDFWPJb2x5e55ydO6rJ4FEMgRvaJpMLMq5KneNZfEh+vOkC\/9YF8p7V\nR9lQKr2Hnpl9dJ67V\/FeeGqGiiLGEDVXGMJ9o7vqx8MvUDDLPffwws0t8O3C1n\/y\nuO8Q7pYvZMJlV4M5i22gw3izzv2b43EB\/WX2Vr2aUxMZiRZMDICjDE4476sG0oig\nKl9ANyG8pqbQ9yHXF\/YWIrsCAwEAAQ==\n-----END PUBLIC KEY-----\""
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 25998,
+      "offset": 26015,
       "length": 988,
       "value": "\"-----BEGIN PUBLIC KEY-----\nMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA2ztwamawYMvBd2Hq5YSS\nDo8hfy8e71g9nA\/+z0\/flHWFRsPercqmIpEFkOGE8YEGWJlhtXBZJ\/XbpQICKZpS\nXye8hNNFvjstKZkHIjx37dDmGnU0GnVDJxnJc+RE37WqJse21rGbitAPmMUvlXXC\njGSygjd4v3v\/uZSIwCelWUTVE1g6iWm2ByyfWL0iYfHyEABrGs2cdvxvKnMkIf10\nKKYUo7QvIzgOGE2hQOgJU40lNNREY0odeIb+i59FsixxpAXKFjB3U6c5WZdvQz4N\nCmDg8cOVIed\/nQhw\/Limxtwpz45GnZsDqGSsr0\/Ig7t\/+C8qdzVxaVbwvZzt99cU\n3CQsT5RnsJGI8fXZ\/MgQxWiOO7iIbmKYGYj1mfbqn1IQLd6MBT66+iH+ECy7v7Vo2\nRIG5Cz5YskAPN50SjkOCtfvc\/0CL4qJJgA9L+jlGIeAg0WbwdbuJWzemYoeZvKWp\n44gfGDNQRWRZShRSXad8BquilyYXcsYl0tACCs13uvm5VkL\/GVIdH8yasPShQpNG\nzgq\/tmfjjE55ynrxlCrfayjH8XUYAk5j4+HLcgtNrHMekwwlflJ7+04We+HPnSJT\n8ZubvTm+CzFKe89w6Hr5dmabM9JqplFDCqALXrBfTUy61wpFwwgV3HVkhlFpzdjI\nHL7faDJCMjCXxlUd1X04eOECAwEAAQ==\n-----END PUBLIC KEY-----\""
     },
