@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.2.3 effective-5.10 (swiftlang-6.2.3.3.21 clang-1700.6.3.2)
-// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name BureauSMV
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.3
+// swift-compiler-version: Apple Swift version 6.3 effective-5.10 (swiftlang-6.3.0.123.5 clang-2100.0.123.102)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name BureauSMV
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3
 import Darwin
 import Foundation
 import Network
@@ -32,9 +32,10 @@ import os
   }
   @available(*, deprecated, message: "Use `public func makeAuthCall(mobile: String, correlationId: String, completion: @escaping (AuthenticationStatus) -> Void)` instead")
   @nonobjc public func makeAuthCall(mobile: Swift.String, correlationId: Swift.String) -> BureauSMV.AuthenticationStatus
-  @nonobjc public func makeAuthCall(mobile: Swift.String, correlationId: Swift.String, completion: @escaping (BureauSMV.AuthenticationStatus) -> Swift.Void)
-  @nonobjc public func makeAuthCallAsync(mobile: Swift.String, correlationId: Swift.String) async -> BureauSMV.AuthenticationStatus
+  @nonobjc public func makeAuthCall(mobile: Swift.String, correlationId: Swift.String, pspCallbacks: [Swift.String] = [], completion: @escaping (BureauSMV.AuthenticationStatus) -> Swift.Void)
+  @nonobjc public func makeAuthCallAsync(mobile: Swift.String, correlationId: Swift.String, pspCallbacks: [Swift.String] = []) async -> BureauSMV.AuthenticationStatus
   @objc public func makeAuthCall(withMobile mobile: Swift.String, correlationId: Swift.String, completion: @escaping (BureauSMV.AuthenticationResult) -> Swift.Void)
+  @objc(makeAuthCallWithMobile:correlationId:pspCallbacks:completion:) public func makeAuthCall(withMobile mobile: Swift.String, correlationId: Swift.String, pspCallbacks: [Swift.String], completion: @escaping (BureauSMV.AuthenticationResult) -> Swift.Void)
   @available(*, deprecated, message: "Use `public func makeAuthCall(mobile: String, correlationId: String, completion: @escaping (AuthenticationStatus) -> Void)` instead")
   @nonobjc public func makeAuthCall(mobile: Swift.String, correlationId: Swift.String) -> Swift.Bool
   @objc deinit
@@ -58,9 +59,7 @@ import os
   case debug = 4
   case verbose = 5
   public static func < (lhs: BureauSMV.LogLevel, rhs: BureauSMV.LogLevel) -> Swift.Bool
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -126,18 +125,14 @@ extension BureauSMV.AuthenticationStatus {
   public var message: Swift.String {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public var bureauCode: Swift.Int? {
     get
   }
-  #endif
   public var alertTitle: Swift.String {
     get
   }
   public static func fromBureauCodeWithMessage(_ code: Swift.Int) -> BureauSMV.AuthenticationStatus
-  #if compiler(>=5.3) && $NonescapableTypes
   public static func fromBureauCodeWithMessage(_ code: Swift.Int, customMessage: Swift.String?) -> BureauSMV.AuthenticationStatus
-  #endif
   public static func fromBureauCodeWithCustomMessage(_ code: Swift.Int, customMessage: Swift.String) -> BureauSMV.AuthenticationStatus
 }
 @objc public enum AuthenticationStatusCode : Swift.Int {
@@ -160,9 +155,7 @@ extension BureauSMV.AuthenticationStatus {
   case countryNotSupported = 422109
   case rateLimitExceeded = 429100
   case internalServerError = 500100
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -186,9 +179,7 @@ extension BureauSMV.AuthenticationStatus {
 @objc public enum Mode : Swift.Int {
   case sandbox = 0
   case production = 1
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
