@@ -9273,68 +9273,138 @@
       "kind": "StringLiteral",
       "offset": 111,
       "length": 7,
-      "value": "\"1.1.0\""
+      "value": "\"1.1.1\""
+    },
+    {
+      "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/ConnectionManager.swift",
+      "kind": "StringLiteral",
+      "offset": 396,
+      "length": 14,
+      "value": "\"CFBundleName\""
+    },
+    {
+      "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/ConnectionManager.swift",
+      "kind": "StringLiteral",
+      "offset": 426,
+      "length": 9,
+      "value": "\"Unknown\""
+    },
+    {
+      "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/ConnectionManager.swift",
+      "kind": "StringLiteral",
+      "offset": 475,
+      "length": 3,
+      "value": "\" \""
+    },
+    {
+      "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/ConnectionManager.swift",
+      "kind": "StringLiteral",
+      "offset": 486,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/ConnectionManager.swift",
+      "kind": "StringLiteral",
+      "offset": 543,
+      "length": 28,
+      "value": "\"CFBundleShortVersionString\""
+    },
+    {
+      "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/ConnectionManager.swift",
+      "kind": "StringLiteral",
+      "offset": 599,
+      "length": 7,
+      "value": "\"0.0.0\""
+    },
+    {
+      "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/ConnectionManager.swift",
+      "kind": "StringLiteral",
+      "offset": 622,
+      "length": 62,
+      "value": "\"BureauSDK\/\""
+    },
+    {
+      "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/ConnectionManager.swift",
+      "kind": "StringLiteral",
+      "offset": 652,
+      "length": 1,
+      "value": "\" \""
+    },
+    {
+      "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/ConnectionManager.swift",
+      "kind": "StringLiteral",
+      "offset": 663,
+      "length": 1,
+      "value": "\"\/\""
+    },
+    {
+      "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/ConnectionManager.swift",
+      "kind": "StringLiteral",
+      "offset": 677,
+      "length": 1,
+      "value": "\" (iOS)\""
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/ConnectionManager.swift",
       "kind": "FloatLiteral",
-      "offset": 475,
+      "offset": 873,
       "length": 3,
       "value": "5.0"
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/ConnectionManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 511,
+      "offset": 909,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/ConnectionManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 867,
+      "offset": 1265,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/ConnectionManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 1412,
+      "offset": 1810,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/ConnectionManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 14933,
+      "offset": 15341,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/ConnectionManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 15046,
+      "offset": 15454,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/ConnectionManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 15068,
+      "offset": 15476,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/ConnectionManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 25939,
+      "offset": 26347,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/ConnectionManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 25961,
+      "offset": 26369,
       "length": 1,
       "value": "1"
     },
