@@ -2,6 +2,7 @@
 // swift-compiler-version: Apple Swift version 6.3 effective-5.10 (swiftlang-6.3.0.123.5 clang-2100.0.123.102)
 // swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name BureauSMV
 // swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3
+import CoreTelephony
 import Darwin
 import Foundation
 import Network
@@ -184,67 +185,6 @@ extension BureauSMV.AuthenticationStatus {
   public var rawValue: Swift.Int {
     get
   }
-}
-@objc @_inheritsConvenienceInitializers @objcMembers public class BureauDefaults : ObjectiveC.NSObject {
-  @objc public static let productionBaseURL: Swift.String
-  @objc public static let sandboxBaseURL: Swift.String
-  @objc public static let initiateEndpoint: Swift.String
-  @objc public static let userInfoEndpoint: Swift.String
-  @objc public static let defaultTimeoutSeconds: Swift.Int
-  @objc public static let minTimeoutSeconds: Swift.Int
-  @objc public static let maxTimeoutSeconds: Swift.Int
-  @objc public static let userInfoTimeoutSeconds: Swift.Int
-  @objc public static let defaultTestClientId: Swift.String
-  @objc public static let defaultTestClientSecret: Swift.String
-  @objc public static let defaultTestPhoneNumber: Swift.String
-  @objc public static let defaultCountryCode: Swift.String
-  @objc public static let phoneNumberPlaceholder: Swift.String
-  @objc public static let minPhoneNumberLength: Swift.Int
-  @objc public static let maxPhoneNumberLength: Swift.Int
-  @objc public static let minCredentialLength: Swift.Int
-  @objc public static let validPhoneStartDigits: [Swift.String]
-  @objc public static let httpMethodGet: Swift.String
-  @objc public static let contentTypeJSON: Swift.String
-  @objc public static let authorizationHeaderKey: Swift.String
-  @objc public static let basicAuthScheme: Swift.String
-  @objc public static let maxRetryAttempts: Swift.Int
-  @objc public static let retryDelaySeconds: Swift.Int
-  @objc public static let httpStatusSuccess: Swift.Int
-  @objc public static let httpStatusBadRequest: Swift.Int
-  @objc public static let httpStatusUnauthorized: Swift.Int
-  @objc public static let httpStatusTimeout: Swift.Int
-  @objc public static let httpStatusServerError: Swift.Int
-  @objc public static let legacyStatusCompleted: Swift.Int64
-  @objc public static let legacyStatusNetworkUnavailable: Swift.Int64
-  @objc public static let legacyStatusDifferentNetwork: Swift.Int64
-  @objc public static let legacyStatusException: Swift.Int64
-  @objc public static let legacyStatusUnknown: Swift.Int64
-  @objc override dynamic public init()
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers @objcMembers public class BureauDemoDefaults : ObjectiveC.NSObject {
-  @objc public static let defaultTimeout: Swift.String
-  @objc public static let alertTitle: Swift.String
-  @objc public static let alertOKButton: Swift.String
-  @objc public static let validateButtonText: Swift.String
-  @objc public static let clientIdLabel: Swift.String
-  @objc public static let clientSecretLabel: Swift.String
-  @objc public static let phoneNumberLabel: Swift.String
-  @objc public static let timeoutLabel: Swift.String
-  @objc public static let environmentLabel: Swift.String
-  @objc public static let sandboxLabel: Swift.String
-  @objc public static let productionLabel: Swift.String
-  @objc public static let emptyClientIdMessage: Swift.String
-  @objc public static let invalidClientIdFormatMessage: Swift.String
-  @objc public static let emptyClientSecretMessage: Swift.String
-  @objc public static let invalidClientSecretFormatMessage: Swift.String
-  @objc public static let emptyPhoneNumberMessage: Swift.String
-  @objc public static let invalidPhoneFormatMessage: Swift.String
-  @objc public static let invalidPhoneStartMessage: Swift.String
-  @objc public static let invalidTimeoutRangeMessage: Swift.String
-  @objc public static let timeoutTooLowMessage: Swift.String
-  @objc override dynamic public init()
-  @objc deinit
 }
 extension BureauSMV.LogLevel : Swift.Hashable {}
 extension BureauSMV.LogLevel : Swift.RawRepresentable {}
