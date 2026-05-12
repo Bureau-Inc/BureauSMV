@@ -6218,7 +6218,7 @@
       "kind": "StringLiteral",
       "offset": 232,
       "length": 7,
-      "value": "\"1.2.0\""
+      "value": "\"1.2.1\""
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/Utility.swift",
@@ -6320,57 +6320,64 @@
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/ConnectionManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 529,
+      "length": 4,
+      "value": "1024"
+    },
+    {
+      "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/ConnectionManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 841,
+      "offset": 887,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/ConnectionManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 1386,
+      "offset": 1432,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/ConnectionManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 16843,
+      "offset": 16889,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/ConnectionManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 16956,
+      "offset": 17002,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/ConnectionManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 16978,
+      "offset": 17024,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/ConnectionManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 28805,
+      "offset": 29454,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/ConnectionManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 29583,
+      "offset": 30396,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/ConnectionManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 29605,
+      "offset": 30418,
       "length": 1,
       "value": "1"
     },
@@ -7189,126 +7196,133 @@
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/AuthEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2024,
+      "offset": 1956,
+      "length": 15,
+      "value": "\"response_body\""
+    },
+    {
+      "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/AuthEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 2064,
       "length": 15,
       "value": "\"NO_CONNECTION\""
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/AuthEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2056,
+      "offset": 2096,
       "length": 6,
       "value": "\"WIFI\""
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/AuthEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2079,
+      "offset": 2119,
       "length": 6,
       "value": "\"DATA\""
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/AuthEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2106,
+      "offset": 2146,
       "length": 11,
       "value": "\"WIFI_DATA\""
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/AuthEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2338,
+      "offset": 2378,
       "length": 17,
       "value": "\"sync_deprecated\""
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/AuthEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2413,
+      "offset": 2453,
       "length": 15,
       "value": "\"objc_callback\""
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/AuthEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2456,
+      "offset": 2496,
       "length": 19,
       "value": "\"objc_psp_callback\""
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/AuthEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2506,
+      "offset": 2546,
       "length": 22,
       "value": "\"sync_bool_deprecated\""
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/AuthEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2595,
+      "offset": 2635,
       "length": 20,
       "value": "\"encryption_failure\""
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/AuthEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2643,
+      "offset": 2683,
       "length": 19,
       "value": "\"url_build_failure\""
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/AuthEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2685,
+      "offset": 2725,
       "length": 13,
       "value": "\"invalid_url\""
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/AuthEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2727,
+      "offset": 2767,
       "length": 20,
       "value": "\"too_many_redirects\""
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/AuthEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2779,
+      "offset": 2819,
       "length": 23,
       "value": "\"request_build_failure\""
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/AuthEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2840,
+      "offset": 2880,
       "length": 29,
       "value": "\"connection_creation_failure\""
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/AuthEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2893,
+      "offset": 2933,
       "length": 14,
       "value": "\"send_failure\""
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/AuthEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2938,
+      "offset": 2978,
       "length": 22,
       "value": "\"invalid_redirect_url\""
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/AuthEvent.swift",
       "kind": "StringLiteral",
-      "offset": 3055,
+      "offset": 3095,
       "length": 21,
       "value": "\"skipped_wifi_active\""
     },
     {
       "filePath": "\/Users\/lalit.kumar\/Documents\/IOS-SDK\/iOS SDK project\/BureauAuthentication\/Utils\/AuthEvent.swift",
       "kind": "StringLiteral",
-      "offset": 3104,
+      "offset": 3144,
       "length": 19,
       "value": "\"skipped_hop_limit\""
     },
