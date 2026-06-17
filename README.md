@@ -14,7 +14,7 @@ Bureau Silent Mobile Verification SDK (OTL)
    ```
    https://github.com/Bureau-Inc/BureauSMV.git
    ```
-3. Choose a version rule (e.g., **Up to Next Major Version** from `1.0.4`)
+3. Choose a version rule (e.g., **Up to Next Major Version** from `1.2.1`)
 4. Click **Add Package** and select the `BureauSMV` library
 
 **Via `Package.swift`:**
@@ -23,7 +23,7 @@ Add the dependency to your package manifest:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/Bureau-Inc/BureauSMV.git", from: "1.0.4")
+    .package(url: "https://github.com/Bureau-Inc/BureauSMV.git", from: "1.2.1")
 ]
 ```
 
@@ -102,8 +102,50 @@ let authSDKObj = BureauAuth.Builder()
 ```
 
 ### Step 4: Usage
-Make an authentication call using the makeauthcall method.
+Make an authentication call using the `async/await` method:
 
 ```swift
-let response: AuthenticationStatus = authSDKObj.makeAuthCall(mobile: "91<<mobile-number>>", correlationId: <<correlationId>>)
+let status = await authSDKObj.makeAuthCallAsync(mobile: "91<<mobile-number>>", correlationId: "<<correlationId>>")
+
+switch status {
+case .completed:
+    // Request is serviceable
+    break
+default:
+    // Handle other statuses (e.g. .networkAndOperatorMismatch, .timeout, .networkUnavailable)
+    break
+}
+```
+
+Alternatively, use the completion handler method:
+
+```swift
+authSDKObj.makeAuthCall(mobile: "91<<mobile-number>>", correlationId: "<<correlationId>>") { (status: AuthenticationStatus) in
+    switch status {
+    case .completed:
+        // Request is serviceable
+        break
+    default:
+        // Handle other statuses (e.g. .networkAndOperatorMismatch, .timeout, .networkUnavailable)
+        break
+    }
+}
+```
+
+#### Objective-C
+
+In Objective-C, the completion handler delivers an `AuthenticationResult`, which exposes `statusCode`, `message`, and `alertTitle`.
+
+```objc
+@import BureauSMV;
+
+[authSDKObj makeAuthCallWithMobile:@"91<<mobile-number>>"
+                    correlationId:@"<<correlationId>>"
+                       completion:^(AuthenticationResult * _Nonnull result) {
+    if (result.statusCode == AuthenticationStatusCodeCompleted) {
+        // Request is serviceable
+    } else {
+        // Handle other statuses
+    }
+}];
 ```
