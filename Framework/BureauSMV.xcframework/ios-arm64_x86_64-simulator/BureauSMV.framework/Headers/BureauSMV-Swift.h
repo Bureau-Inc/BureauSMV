@@ -437,7 +437,7 @@ SWIFT_CLASS("_TtC9BureauSMV17BureauAuthBuilder")
 - (nonnull instancetype)setCallBackUrl:(NSString * _Nonnull)callBackUrl SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)setTimeout:(NSInteger)timeoutInSeconds SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)setMode:(enum Mode)mode SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)disableWifiSwitchOver SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)disableWifiSwitchOver SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_MSG("This method no longer has any effect and will be removed in a future release.");
 - (nonnull instancetype)setLogLevel:(enum LogLevel)level SWIFT_WARN_UNUSED_RESULT;
 - (BureauAuth * _Nonnull)build SWIFT_WARN_UNUSED_RESULT;
 @end
@@ -1003,7 +1003,7 @@ SWIFT_CLASS("_TtC9BureauSMV17BureauAuthBuilder")
 - (nonnull instancetype)setCallBackUrl:(NSString * _Nonnull)callBackUrl SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)setTimeout:(NSInteger)timeoutInSeconds SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)setMode:(enum Mode)mode SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)disableWifiSwitchOver SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)disableWifiSwitchOver SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_MSG("This method no longer has any effect and will be removed in a future release.");
 - (nonnull instancetype)setLogLevel:(enum LogLevel)level SWIFT_WARN_UNUSED_RESULT;
 - (BureauAuth * _Nonnull)build SWIFT_WARN_UNUSED_RESULT;
 @end

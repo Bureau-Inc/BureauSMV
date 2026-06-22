@@ -26,6 +26,7 @@ import os
     public func setCallBackUrl(callBackUrl: Swift.String) -> Self
     public func setTimeout(timeoutinSeconds: Swift.Int) -> Self
     public func setMode(mode: BureauSMV.Mode) -> Self
+    @available(*, deprecated, message: "This method no longer has any effect and will be removed in a future release.")
     public func disableWifiSwitchOver() -> Self
     public func setLogLevel(_ level: BureauSMV.LogLevel) -> Self
     public func build() -> BureauSMV.BureauAuth
@@ -47,6 +48,7 @@ import os
   @objc public func setCallBackUrl(_ callBackUrl: Swift.String) -> Self
   @objc public func setTimeout(_ timeoutInSeconds: Swift.Int) -> Self
   @objc public func setMode(_ mode: BureauSMV.Mode) -> Self
+  @available(*, deprecated, message: "This method no longer has any effect and will be removed in a future release.")
   @objc override public func disableWifiSwitchOver() -> Self
   @objc override public func setLogLevel(_ level: BureauSMV.LogLevel) -> Self
   @objc override public func build() -> BureauSMV.BureauAuth
