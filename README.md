@@ -149,3 +149,44 @@ In Objective-C, the completion handler delivers an `AuthenticationResult`, which
     }
 }];
 ```
+
+### Step 5: PSP Callbacks (Optional)
+
+Each authentication call accepts an optional `pspCallbacks` parameter — an array of `String` keys that tells the SDK which Payment Service Provider (PSP) callbacks to enable for that request. Pass the keys provided to you by Bureau for your integration. When omitted, it defaults to an empty array (`[]`) and no PSP callbacks are triggered.
+
+**What to call:** the same `makeAuthCallAsync` / `makeAuthCall` methods from Step 4.
+
+**What to pass:** an array of PSP callback key strings, e.g. `["<<psp-key-1>>", "<<psp-key-2>>"]`.
+
+**Swift — `async/await`:**
+
+```swift
+let status = await authSDKObj.makeAuthCallAsync(
+    mobile: "91<<mobile-number>>",
+    correlationId: "<<correlationId>>",
+    pspCallbacks: ["<<psp-key-1>>", "<<psp-key-2>>"]
+)
+```
+
+**Swift — completion handler:**
+
+```swift
+authSDKObj.makeAuthCall(
+    mobile: "91<<mobile-number>>",
+    correlationId: "<<correlationId>>",
+    pspCallbacks: ["<<psp-key-1>>", "<<psp-key-2>>"]
+) { (status: AuthenticationStatus) in
+    // Handle status
+}
+```
+
+**Objective-C:**
+
+```objc
+[authSDKObj makeAuthCallWithMobile:@"91<<mobile-number>>"
+                    correlationId:@"<<correlationId>>"
+                     pspCallbacks:@[@"<<psp-key-1>>", @"<<psp-key-2>>"]
+                       completion:^(AuthenticationResult * _Nonnull result) {
+    // Handle result
+}];
+```
