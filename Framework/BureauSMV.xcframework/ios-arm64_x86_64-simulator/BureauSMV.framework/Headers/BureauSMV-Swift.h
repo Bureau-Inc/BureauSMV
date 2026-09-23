@@ -428,17 +428,13 @@ SWIFT_CLASS("_TtCC9BureauSMV10BureauAuth7Builder")
 @end
 
 SWIFT_ENUM_FWD_DECL(NSInteger, Mode)
-SWIFT_ENUM_FWD_DECL(NSInteger, LogLevel)
 /// Objective-C compatible builder for BureauAuth. Use this from Objective-C; Swift code can use BureauAuth.Builder.
 SWIFT_CLASS("_TtC9BureauSMV17BureauAuthBuilder")
 @interface BureauAuthBuilder : Builder
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)setClientId:(NSString * _Nonnull)clientId SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)setCallBackUrl:(NSString * _Nonnull)callBackUrl SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)setTimeout:(NSInteger)timeoutInSeconds SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)setMode:(enum Mode)mode SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)disableWifiSwitchOver SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_MSG("This method no longer has any effect and will be removed in a future release.");
-- (nonnull instancetype)setLogLevel:(enum LogLevel)level SWIFT_WARN_UNUSED_RESULT;
 - (BureauAuth * _Nonnull)build SWIFT_WARN_UNUSED_RESULT;
 @end
 
@@ -490,65 +486,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _No
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull timeoutError;)
 + (NSString * _Nonnull)timeoutError SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-/// Centralized logging system for Bureau Authentication SDK (Objective-C compatible).
-/// Provides configurable verbosity levels and thread-safe logging.
-SWIFT_CLASS("_TtC9BureauSMV12BureauLogger")
-@interface BureauLogger : NSObject
-/// Shared singleton instance for framework-wide access
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) BureauLogger * _Nonnull shared;)
-+ (BureauLogger * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
-/// Private initializer to enforce singleton pattern
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-/// Configure the log level for the logger
-/// \param level The minimum log level to output
-///
-- (void)configureWithLevel:(enum LogLevel)level;
-/// Set the log level (alias for configure)
-/// \param level The minimum log level to output
-///
-- (void)setLogLevel:(enum LogLevel)level;
-/// Get the current log level
-///
-/// returns:
-/// The current configured log level
-- (enum LogLevel)getLogLevel SWIFT_WARN_UNUSED_RESULT;
-/// Single unified logging function
-/// \param message The log message string
-///
-/// \param errorCode Optional error code to append to the log message
-///
-/// \param type The log level/type (error, warning, info, debug, verbose) (defaults to .info)
-///
-- (void)logWithMessage:(NSString * _Nonnull)message errorCode:(NSInteger)errorCode type:(enum LogLevel)type;
-@end
-
-/// Log level enumeration with hierarchical levels (Objective-C compatible).
-/// Levels follow a hierarchical model where enabling a level also enables all higher-priority levels.
-typedef SWIFT_ENUM(NSInteger, LogLevel, open) {
-  LogLevelNone = 0,
-  LogLevelError = 1,
-  LogLevelWarning = 2,
-  LogLevelInfo = 3,
-  LogLevelDebug = 4,
-  LogLevelVerbose = 5,
-};
-
-/// Thread-safe, in-memory log buffer for the current app session.
-SWIFT_CLASS("_TtC9BureauSMV10LogManager")
-@interface LogManager : NSObject
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) LogManager * _Nonnull shared;)
-+ (LogManager * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-/// Appends a log line with a timestamp prefix.
-- (void)addLog:(NSString * _Nonnull)message;
-/// Returns a snapshot of all log entries in order.
-- (NSArray<NSString *> * _Nonnull)allLogs SWIFT_WARN_UNUSED_RESULT;
-/// Clears all stored log entries.
-- (void)clear;
 @end
 
 typedef SWIFT_ENUM(NSInteger, Mode, open) {
@@ -994,17 +931,13 @@ SWIFT_CLASS("_TtCC9BureauSMV10BureauAuth7Builder")
 @end
 
 SWIFT_ENUM_FWD_DECL(NSInteger, Mode)
-SWIFT_ENUM_FWD_DECL(NSInteger, LogLevel)
 /// Objective-C compatible builder for BureauAuth. Use this from Objective-C; Swift code can use BureauAuth.Builder.
 SWIFT_CLASS("_TtC9BureauSMV17BureauAuthBuilder")
 @interface BureauAuthBuilder : Builder
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)setClientId:(NSString * _Nonnull)clientId SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)setCallBackUrl:(NSString * _Nonnull)callBackUrl SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)setTimeout:(NSInteger)timeoutInSeconds SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)setMode:(enum Mode)mode SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)disableWifiSwitchOver SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_MSG("This method no longer has any effect and will be removed in a future release.");
-- (nonnull instancetype)setLogLevel:(enum LogLevel)level SWIFT_WARN_UNUSED_RESULT;
 - (BureauAuth * _Nonnull)build SWIFT_WARN_UNUSED_RESULT;
 @end
 
@@ -1056,65 +989,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _No
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull timeoutError;)
 + (NSString * _Nonnull)timeoutError SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-/// Centralized logging system for Bureau Authentication SDK (Objective-C compatible).
-/// Provides configurable verbosity levels and thread-safe logging.
-SWIFT_CLASS("_TtC9BureauSMV12BureauLogger")
-@interface BureauLogger : NSObject
-/// Shared singleton instance for framework-wide access
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) BureauLogger * _Nonnull shared;)
-+ (BureauLogger * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
-/// Private initializer to enforce singleton pattern
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-/// Configure the log level for the logger
-/// \param level The minimum log level to output
-///
-- (void)configureWithLevel:(enum LogLevel)level;
-/// Set the log level (alias for configure)
-/// \param level The minimum log level to output
-///
-- (void)setLogLevel:(enum LogLevel)level;
-/// Get the current log level
-///
-/// returns:
-/// The current configured log level
-- (enum LogLevel)getLogLevel SWIFT_WARN_UNUSED_RESULT;
-/// Single unified logging function
-/// \param message The log message string
-///
-/// \param errorCode Optional error code to append to the log message
-///
-/// \param type The log level/type (error, warning, info, debug, verbose) (defaults to .info)
-///
-- (void)logWithMessage:(NSString * _Nonnull)message errorCode:(NSInteger)errorCode type:(enum LogLevel)type;
-@end
-
-/// Log level enumeration with hierarchical levels (Objective-C compatible).
-/// Levels follow a hierarchical model where enabling a level also enables all higher-priority levels.
-typedef SWIFT_ENUM(NSInteger, LogLevel, open) {
-  LogLevelNone = 0,
-  LogLevelError = 1,
-  LogLevelWarning = 2,
-  LogLevelInfo = 3,
-  LogLevelDebug = 4,
-  LogLevelVerbose = 5,
-};
-
-/// Thread-safe, in-memory log buffer for the current app session.
-SWIFT_CLASS("_TtC9BureauSMV10LogManager")
-@interface LogManager : NSObject
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) LogManager * _Nonnull shared;)
-+ (LogManager * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-/// Appends a log line with a timestamp prefix.
-- (void)addLog:(NSString * _Nonnull)message;
-/// Returns a snapshot of all log entries in order.
-- (NSArray<NSString *> * _Nonnull)allLogs SWIFT_WARN_UNUSED_RESULT;
-/// Clears all stored log entries.
-- (void)clear;
 @end
 
 typedef SWIFT_ENUM(NSInteger, Mode, open) {

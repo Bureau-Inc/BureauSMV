@@ -3,7 +3,7 @@
 // swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name BureauSMV
 // swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3
 import CoreTelephony
-import Darwin
+import CryptoKit
 import Foundation
 import Network
 import Security
@@ -11,24 +11,12 @@ import Swift
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
-import os
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers final public class LogManager : ObjectiveC.NSObject {
-  @objc public static let shared: BureauSMV.LogManager
-  @objc final public func addLog(_ message: Swift.String)
-  @objc final public func allLogs() -> [Swift.String]
-  @objc final public func clear()
-  @objc deinit
-}
 @objc @_hasMissingDesignatedInitializers @objcMembers public class BureauAuth : ObjectiveC.NSObject {
   @objc @_inheritsConvenienceInitializers public class Builder : ObjectiveC.NSObject {
     @objc override dynamic public init()
     public func setClientId(clientId: Swift.String) -> Self
-    public func setCallBackUrl(callBackUrl: Swift.String) -> Self
     public func setTimeout(timeoutinSeconds: Swift.Int) -> Self
     public func setMode(mode: BureauSMV.Mode) -> Self
-    @available(*, deprecated, message: "This method no longer has any effect and will be removed in a future release.")
-    public func disableWifiSwitchOver() -> Self
-    public func setLogLevel(_ level: BureauSMV.LogLevel) -> Self
     public func build() -> BureauSMV.BureauAuth
     @objc deinit
   }
@@ -38,42 +26,14 @@ import os
   @nonobjc public func makeAuthCallAsync(mobile: Swift.String, correlationId: Swift.String, pspCallbacks: [Swift.String] = []) async -> BureauSMV.AuthenticationStatus
   @objc public func makeAuthCall(withMobile mobile: Swift.String, correlationId: Swift.String, completion: @escaping (BureauSMV.AuthenticationResult) -> Swift.Void)
   @objc(makeAuthCallWithMobile:correlationId:pspCallbacks:completion:) public func makeAuthCall(withMobile mobile: Swift.String, correlationId: Swift.String, pspCallbacks: [Swift.String], completion: @escaping (BureauSMV.AuthenticationResult) -> Swift.Void)
-  @available(*, deprecated, message: "Use `public func makeAuthCall(mobile: String, correlationId: String, completion: @escaping (AuthenticationStatus) -> Void)` instead")
-  @nonobjc public func makeAuthCall(mobile: Swift.String, correlationId: Swift.String) -> Swift.Bool
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @objcMembers public class BureauAuthBuilder : BureauSMV.BureauAuth.Builder {
   @objc override dynamic public init()
   @objc public func setClientId(_ clientId: Swift.String) -> Self
-  @objc public func setCallBackUrl(_ callBackUrl: Swift.String) -> Self
   @objc public func setTimeout(_ timeoutInSeconds: Swift.Int) -> Self
   @objc public func setMode(_ mode: BureauSMV.Mode) -> Self
-  @available(*, deprecated, message: "This method no longer has any effect and will be removed in a future release.")
-  @objc override public func disableWifiSwitchOver() -> Self
-  @objc override public func setLogLevel(_ level: BureauSMV.LogLevel) -> Self
   @objc override public func build() -> BureauSMV.BureauAuth
-  @objc deinit
-}
-@objc public enum LogLevel : Swift.Int, Swift.Comparable {
-  case none = 0
-  case error = 1
-  case warning = 2
-  case info = 3
-  case debug = 4
-  case verbose = 5
-  public static func < (lhs: BureauSMV.LogLevel, rhs: BureauSMV.LogLevel) -> Swift.Bool
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class BureauLogger : ObjectiveC.NSObject {
-  @objc public static let shared: BureauSMV.BureauLogger
-  @objc public func configure(level: BureauSMV.LogLevel)
-  @objc public func setLogLevel(_ level: BureauSMV.LogLevel)
-  @objc public func getLogLevel() -> BureauSMV.LogLevel
-  @objc public func log(message: Swift.String, errorCode: Swift.Int = Int.min, type: BureauSMV.LogLevel = .info)
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @objcMembers public class BureauErrorMessages : ObjectiveC.NSObject {
@@ -188,8 +148,6 @@ extension BureauSMV.AuthenticationStatus {
     get
   }
 }
-extension BureauSMV.LogLevel : Swift.Hashable {}
-extension BureauSMV.LogLevel : Swift.RawRepresentable {}
 extension BureauSMV.AuthenticationStatusCode : Swift.Equatable {}
 extension BureauSMV.AuthenticationStatusCode : Swift.Hashable {}
 extension BureauSMV.AuthenticationStatusCode : Swift.RawRepresentable {}
