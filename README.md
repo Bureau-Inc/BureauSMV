@@ -14,7 +14,7 @@ Bureau Silent Mobile Verification SDK (OTL)
    ```
    https://github.com/Bureau-Inc/BureauSMV.git
    ```
-3. Choose a version rule (e.g., **Up to Next Major Version** from `1.2.1`)
+3. Choose **Up to Next Minor Version** from `1.3.0`
 4. Click **Add Package** and select the `BureauSMV` library
 
 **Via `Package.swift`:**
@@ -23,7 +23,7 @@ Add the dependency to your package manifest:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/Bureau-Inc/BureauSMV.git", from: "1.2.1")
+    .package(url: "https://github.com/Bureau-Inc/BureauSMV.git", .upToNextMinor(from: "1.3.0"))
 ]
 ```
 
@@ -46,45 +46,17 @@ targets: [
 
 ```ruby
 # Podfile
-pod 'BureauSMV'
+pod 'BureauSMV', '~> 1.3.0'
 ```
 
-### Step 2 - Configure info.plist
-Open and add the below code to the info.plist file.
+2. Run the command below to install the SDK. If CocoaPods does not find version `1.3.0`, update your local specs repo first:
 
-```xml
-<key>NSAppTransportSecurity</key>
-<dict>
-    <key>NSAllowsArbitraryLoads</key>
-    <true/>
-    <key>NSExceptionDomains</key>
-    <dict>
-        <key>jio.com</key>
-        <dict>
-            <key>NSExceptionAllowsInsecureHTTPLoads</key>
-            <true/>
-            <key>NSIncludesSubdomains</key>
-            <true/>
-        </dict>
-        <key>airtel.in</key>
-        <dict>
-            <key>NSExceptionAllowsInsecureHTTPLoads</key>
-            <true/>
-            <key>NSIncludesSubdomains</key>
-            <true/>
-        </dict>
-        <key>in-vil.ipification.com</key>
-        <dict>
-            <key>NSExceptionAllowsInsecureHTTPLoads</key>
-            <true/>
-            <key>NSIncludesSubdomains</key>
-            <true/>
-        </dict>
-    </dict>
-</dict>
+```bash
+pod repo update
+pod install
 ```
 
-### Step 3: Initialize SDK
+### Step 2: Initialize SDK
 
 1. Import the SDK in your UIViewController:
 
@@ -101,7 +73,7 @@ let authSDKObj = BureauAuth.Builder()
     .build()
 ```
 
-### Step 4: Usage
+### Step 3: Usage
 Make an authentication call using the `async/await` method:
 
 ```swift
@@ -150,11 +122,11 @@ In Objective-C, the completion handler delivers an `AuthenticationResult`, which
 }];
 ```
 
-### Step 5: PSP Callbacks (Optional)
+### Step 4: PSP Callbacks (Optional)
 
 Each authentication call accepts an optional `pspCallbacks` parameter — an array of `String` keys that tells the SDK which Payment Service Provider (PSP) callbacks to enable for that request. Pass the keys provided to you by Bureau for your integration. When omitted, it defaults to an empty array (`[]`) and no PSP callbacks are triggered.
 
-**What to call:** the same `makeAuthCallAsync` / `makeAuthCall` methods from Step 4.
+**What to call:** the same `makeAuthCallAsync` / `makeAuthCall` methods from Step 3.
 
 **What to pass:** an array of PSP callback key strings, e.g. `["<<psp-key-1>>", "<<psp-key-2>>"]`.
 
