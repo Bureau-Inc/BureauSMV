@@ -14,11 +14,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ul5RwAUdYMLPYESnuEAhcPlqa5E=
+		plSvU58k+MS/fzTai7iIgva3wAU=
 		</data>
 		<key>Modules/BureauSMV.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		LwUYY1Uv9bDy4+mkmG6JXsX8ymY=
+		sbthx+o5HWyBZtFYcOTwkWs6VhU=
 		</data>
 		<key>Modules/BureauSMV.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -34,11 +34,11 @@
 		</data>
 		<key>Modules/BureauSMV.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		vO7UGWiwO9reSNV2CzyEhrGHUH8=
+		wOdyt2/P1EU8hikEQuT+YzEgzr4=
 		</data>
 		<key>Modules/BureauSMV.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		LwUYY1Uv9bDy4+mkmG6JXsX8ymY=
+		sbthx+o5HWyBZtFYcOTwkWs6VhU=
 		</data>
 		<key>Modules/BureauSMV.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/BureauSMV.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		JxWJTlX9WxNXryArcyudItpzGUg=
+		YjHdyu6Vb24aNppaXVNo1wy8muk=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -85,7 +85,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Emv+5iBBNxjsv1I57M7O7VO9zmXubO10j5wh1JXXNpo=
+			KvVTZiZsMm0gaZ+LAulsh8B639VhaGXqzBEBDKmqSEk=
 			</data>
 		</dict>
 		<key>Modules/BureauSMV.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -113,14 +113,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			roVDsZeDAVQp9WtjAxyt+v70+wdGOK8T2ZbXcdLigGI=
+			bfKhmnWXhbK6lRbRcG/0chuhtZJI7npjCwWkprLSu2M=
 			</data>
 		</dict>
 		<key>Modules/BureauSMV.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Emv+5iBBNxjsv1I57M7O7VO9zmXubO10j5wh1JXXNpo=
+			KvVTZiZsMm0gaZ+LAulsh8B639VhaGXqzBEBDKmqSEk=
 			</data>
 		</dict>
 		<key>Modules/BureauSMV.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -148,7 +148,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			TuXIQLPFeakHUZ34JX8Il89FpTA300vqeQWluTHIIkA=
+			EykmX1kgXTcN+qt0Kgccbvr3zFieBYk8uwYMPRZljh4=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
