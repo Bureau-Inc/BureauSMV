@@ -14,7 +14,7 @@ Bureau Silent Mobile Verification SDK (OTL)
    ```
    https://github.com/Bureau-Inc/BureauSMV.git
    ```
-3. Choose **Up to Next Minor Version** from `1.3.0`
+3. Choose **Up to Next Minor Version** from `1.4.0`
 4. Click **Add Package** and select the `BureauSMV` library
 
 **Via `Package.swift`:**
@@ -23,7 +23,7 @@ Add the dependency to your package manifest:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/Bureau-Inc/BureauSMV.git", .upToNextMinor(from: "1.3.0"))
+    .package(url: "https://github.com/Bureau-Inc/BureauSMV.git", .upToNextMinor(from: "1.4.0"))
 ]
 ```
 
@@ -46,10 +46,10 @@ targets: [
 
 ```ruby
 # Podfile
-pod 'BureauSMV', '~> 1.3.0'
+pod 'BureauSMV', '~> 1.4.0'
 ```
 
-2. Run the command below to install the SDK. If CocoaPods does not find version `1.3.0`, update your local specs repo first:
+2. Run the command below to install the SDK. If CocoaPods does not find version `1.4.0`, update your local specs repo first:
 
 ```bash
 pod repo update
